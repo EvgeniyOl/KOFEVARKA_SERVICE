@@ -1,0 +1,126 @@
+/* HEADER-------------------------- */
+/* Logotip */
+.logo {
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(31, 112, 233);
+  margin-right: 10px;
+}
+/* Links */
+.link {
+  font-size: 20px;
+}
+.link:hover {
+  text-shadow: 0 0 10px rgb(31, 112, 233);
+}
+
+/* FOOTER-------------------------- */
+
+/* Social items */
+.footerContainer {
+  z-index: 3;
+  bottom: 0;
+  width: 100%;
+  background-color: #212529;
+}
+.footerContainer a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  color: grey;
+  text-decoration: none;
+}
+.footerContainer a:hover {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  color: rgb(204, 181, 2);
+  text-decoration: none;
+}
+.footerContainer hr {
+  color: gray;
+  width: 60%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+.ulFooter {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.liFooterInstagram {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #212529;
+}
+.liFooterInstagram:hover {
+  box-shadow: 0 0 30px rgb(219, 50, 117), 0 0 60px rgb(219, 50, 117);
+}
+.liFooterWatsUp {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #212529;
+}
+.liFooterWatsUp:hover {
+  box-shadow: 0 0 30px rgb(17, 120, 18), 0 0 60px rgb(17, 120, 18);
+}
+.liFooterVk {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #212529;
+}
+.liFooterVk:hover {
+  box-shadow: 0 0 30px rgb(34, 63, 168), 0 0 60px rgb(34, 63, 168);
+}
+.liFooterYoutube {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #212529;
+}
+.liFooterYoutube:hover {
+  box-shadow: 0 0 30px rgb(219, 10, 10), 0 0 60px rgb(219, 10, 10);
+}
+.liFooterPhoneNumber {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #212529;
+}
+.liFooterPhoneNumber:hover {
+  box-shadow: 0 0 30px rgb(223, 175, 16), 0 0 60px rgb(223, 175, 16);
+}

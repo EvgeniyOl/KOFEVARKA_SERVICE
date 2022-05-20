@@ -1,0 +1,54 @@
+.container {
+  max-width: 1600px;
+  margin: auto;
+  min-height: 800px;
+  font-size: 16px;
+  position: relative;
+  background-color: black;
+}
+.info {
+  margin-top: 66px;
+  padding-left: 20px;
+  padding-top: 120px;
+}
+.container::before {
+  content: '';
+  position: absolute;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('./../../Assets/home-background.jpg') 50% / cover no-repeat;
+  background-position: center;
+}
+.tittleDiller,
+.tittle {
+  font-size: 20px;
+  text-align: left;
+}
+.tittleDiller,
+.tittle,
+.info p {
+  position: relative;
+  color: white;
+}
+
+/* ---media--- */
+@media (max-width: 1200px) {
+  .container {
+    font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1400 - 320)));
+  }
+  .tittle,
+  .tittleDiller {
+    text-align: center;
+  }
+  .info {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 50px;
+    text-align: center;
+  }
+}
+
+/* ----Card---- */
