@@ -1,0 +1,16 @@
+/* Logotip */
+
+.logo {
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(31, 112, 233);
+  margin-right: 10px;
+}
+
+/* Links */
+
+.link {
+  font-size: 20px;
+}
+.link:hover {
+  text-shadow: 0 0 10px rgb(31, 112, 233);
+}
