@@ -32,58 +32,61 @@ const textAnimation = {
 const Home = (props) => {
   return (
     <>
-      <div>
-        <div className={s.carouselMedia}>
-          <Carousel className={s.carousel}>
-            <Carousel.Item className={s.carouselItem}>
-              <img className="d-block w-100" src={slide1} alt="First slide" />
-              <Carousel.Caption className={s.caption}>
-                <p className={s.p}>
-                  Регулярно заказывайте у нас кофе и будьте спокойны за свою
-                  кофемашину
-                  <br /> Техническое Обслуживание будет Бесплатным!
-                </p>
-                <p>
-                  <a href="#">Узнать подробности</a>
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item className={s.carouselItem}>
-              <img className="d-block w-100" src={slide2} alt="First slide" />
-              <Carousel.Caption className={s.caption}>
-                <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
-                <p>
-                  <a href="#">Узнать подробности</a>
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item className={s.carouselItem}>
-              <img className="d-block w-100" src={slide3} alt="First slide" />
-              <Carousel.Caption className={s.caption}>
-                <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
-                <p>
-                  <a href="#">Узнать подробности</a>
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item className={s.carouselItem}>
-              <img className="d-block w-100" src={slide4} alt="First slide" />
-              <Carousel.Caption className={s.caption}>
-                <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
-                <p>
-                  <a href="#">Узнать подробности</a>
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </div>
+      <div className={s.carouselMedia}>
+        <Carousel className={s.carousel}>
+          <Carousel.Item className={s.carouselItem}>
+            <img className="d-block w-100" src={slide1} alt="First slide" />
+            <Carousel.Caption className={s.caption}>
+              <p className={s.p}>
+                Регулярно заказывайте у нас кофе и будьте спокойны за свою
+                кофемашину
+                <br /> Техническое Обслуживание будет Бесплатным!
+              </p>
+              <motion.p whileHover={{ scale: 1.5 }}>
+                <a href="#">Узнать подробности</a>
+              </motion.p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className={s.carouselItem}>
+            <img className="d-block w-100" src={slide2} alt="First slide" />
+            <Carousel.Caption className={s.caption}>
+              <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
+              <motion.p whileHover={{ scale: 1.5 }}>
+                <a href="#">Узнать подробности</a>
+              </motion.p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className={s.carouselItem}>
+            <img className="d-block w-100" src={slide3} alt="First slide" />
+            <Carousel.Caption className={s.caption}>
+              <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
+              <motion.p whileHover={{ scale: 1.5 }}>
+                <a href="#">Узнать подробности</a>
+              </motion.p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className={s.carouselItem}>
+            <img className="d-block w-100" src={slide4} alt="First slide" />
+            <Carousel.Caption className={s.caption}>
+              <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
+              <motion.p whileHover={{ scale: 1.5 }}>
+                <a href="#">Узнать подробности</a>
+              </motion.p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
+
+      <div className={s.blackBlock}>
+        <h5>Нужно что-то написать</h5>
+      </div>
+
       <div className={s.block1}>
         <motion.div
           className={s.block1Tittle}
           initial="hiddenLeft"
           whileInView="visibleLeft"
-          viewport={{ amount: 0.2, once: true }}
+          viewport={{ amount: 1, once: false }}
         >
           <motion.p variants={textAnimation}>
             Занимаемся кофейным оборудованием
@@ -94,7 +97,7 @@ const Home = (props) => {
           className={s.block1Ul}
           initial="hiddenBottom"
           whileInView="visibleBottom"
-          viewport={{ amount: 0.2, once: true }}
+          viewport={{ amount: 0.5 }}
         >
           <ul>
             {' '}

@@ -3,9 +3,6 @@
   .carouselItem p {
     font-size: calc(12px + (32 - 12) * ((100vw - 320px) / (1400 - 320)));
   }
-  .carouselItem {
-    max-height: calc(200px + (800 - 200) * ((100vw - 320px) / (1400 - 320)));
-  }
 }
 .p {
   color: #ffffff;
@@ -164,4 +161,11 @@
     padding-left: 20%;
     padding-top: 10px;
   }
+}
+
+/* --blackBlock-- */
+.blackBlock {
+  height: 500px;
+  background-color: #212529;
+  color: #ffffff;
 }
