@@ -1,56 +1,148 @@
 import React from 'react';
 import s from './Home.module.css';
-import saeco from './../../Assets/saeco1.webp';
-import etna from './../../Assets/etna.jpeg';
-import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
+import slide1 from './../../Assets/slide1.jpg';
+import slide2 from './../../Assets/roster.jpeg';
+import slide3 from './../../Assets/slide2.jpeg';
+import slide4 from './../../Assets/slide2.webp';
+import ContactsButton from '../ContactsButton/ContactsButton';
+import { motion } from 'framer-motion';
+
+const textAnimation = {
+  hiddenLeft: {
+    x: -100,
+    opacity: 0,
+  },
+  visibleLeft: (custom) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.5 },
+  }),
+  hiddenBottom: {
+    y: 100,
+    opacity: 0,
+  },
+  visibleBottom: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.5 },
+  }),
+};
 
 const Home = (props) => {
   return (
     <>
-      <div className={s.container}>
-        <div className={s.info}>
-          <span className={s.tittle}>Основные услуги нашей компании:</span>
-          <hr />
-          <p>
-            Ремонт и обслуживание бытового и профессионального кофейного
-            оборудования.
-          </p>
-          <p>Большой ассортимент кофе, чая, эксклюзивного варенья, сиропов.</p>
-          <p>Формируем подарки на ваш вкус и любой бюджет.</p>
-          <p>
-            В продаже имеется профессиональная химия для кофейного оборудования.
-          </p>
-          <span className={s.tittleDiller}>Являемся официальными дилерами</span>
-          <div class="row d-flex justify-content-center">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-              <Card className='' style={{ width: '18rem' }}>
-                <Card.Title className="text-center">Saeco</Card.Title>
-                <Card.Img variant="top" src={saeco} alt="..." />
-                <Card.Body>
-                  <div className={s.cardTextWrapper}>
-                    <Card.Text className="text-dark text-center">
-                      Автоматические эспрессо-кофемашины Saeco обеспечивают
-                      приготовление превосходного кофе и безграничные
-                      возможности выбора.
-                    </Card.Text>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-              <Card style={{ width: '18rem' }}>
-                <Card.Title className="text-center">Кофе 'Этна'</Card.Title>
-                <Card.Img variant="top" src={etna} alt="..." />
-                <Card.Body>
-                  <div className={s.cardTextWrapper}>
-                    <Card.Text className="text-dark text-center">
-                      Вкусный кофеек!
-                    </Card.Text>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
+      <div>
+        <div className={s.carouselMedia}>
+          <Carousel className={s.carousel}>
+            <Carousel.Item className={s.carouselItem}>
+              <img className="d-block w-100" src={slide1} alt="First slide" />
+              <Carousel.Caption className={s.caption}>
+                <p className={s.p}>
+                  Регулярно заказывайте у нас кофе и будьте спокойны за свою
+                  кофемашину
+                  <br /> Техническое Обслуживание будет Бесплатным!
+                </p>
+                <p>
+                  <a href="#">Узнать подробности</a>
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className={s.carouselItem}>
+              <img className="d-block w-100" src={slide2} alt="First slide" />
+              <Carousel.Caption className={s.caption}>
+                <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
+                <p>
+                  <a href="#">Узнать подробности</a>
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className={s.carouselItem}>
+              <img className="d-block w-100" src={slide3} alt="First slide" />
+              <Carousel.Caption className={s.caption}>
+                <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
+                <p>
+                  <a href="#">Узнать подробности</a>
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className={s.carouselItem}>
+              <img className="d-block w-100" src={slide4} alt="First slide" />
+              <Carousel.Caption className={s.caption}>
+                <p className={s.p}>Болшой выбор кофе от разных обжарщиков</p>
+                <p>
+                  <a href="#">Узнать подробности</a>
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
+      <div className={s.block1}>
+        <motion.div
+          className={s.block1Tittle}
+          initial="hiddenLeft"
+          whileInView="visibleLeft"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <motion.p variants={textAnimation}>
+            Занимаемся кофейным оборудованием
+            <br /> уже <span>более 10 лет!</span>
+          </motion.p>
+        </motion.div>
+        <motion.div
+          className={s.block1Ul}
+          initial="hiddenBottom"
+          whileInView="visibleBottom"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <ul>
+            {' '}
+            <motion.p variants={textAnimation} custom={1}>
+              Будем рады помочь вам
+            </motion.p>
+            <hr />
+            <motion.li variants={textAnimation} custom={2}>
+              Отремонтировать вашу кофемашину
+            </motion.li>
+            <motion.li variants={textAnimation} custom={3}>
+              Сделать Техническое Обслуживание
+            </motion.li>
+            <motion.li variants={textAnimation} custom={4}>
+              Подобрать кофе на ваш вкус
+            </motion.li>
+          </ul>
+        </motion.div>
+        <motion.div
+          initial="hiddenLeft"
+          whileInView="visibleLeft"
+          viewport={{ amount: 0.2 }}
+          className={s.block1Zip}
+        >
+          <motion.p
+            variants={textAnimation}
+            custom={2}
+            className={s.block1ZipP1}
+          >
+            Используем оригинальные запчасти
+          </motion.p>
+          <motion.p
+            variants={textAnimation}
+            custom={3}
+            className={s.block1ZipP2}
+          >
+            Полировка хрома
+          </motion.p>
+          <motion.p
+            variants={textAnimation}
+            custom={4}
+            className={s.block1ZipP3}
+          >
+            Покраска кофемашины под ваш интерьер
+          </motion.p>
+        </motion.div>
+        <div className={s.blockButton}>
+          <ContactsButton />
         </div>
       </div>
     </>

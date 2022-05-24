@@ -1,8 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import About from '../../Pages/About/About';
-import Contacts from '../../Pages/Contacts/Contacts';
 import Home from '../../Pages/Home/Home';
+import Partners from '../../Pages/Partners/Partners';
+import Service from '../../Pages/Service/Service';
+import Shop from '../../Pages/Shop/Shop';
 import Layout from '../Layout/Layout';
 
 export default function RoutePage() {
@@ -12,7 +14,9 @@ export default function RoutePage() {
 				<Route path='/' element={<Layout />} >
 					<Route index element={<Home />} />
 					<Route path="About" element={<About />} />
-					<Route path="Contacts" element={<Contacts />} />
+					<Route path="Service" element={<Service />} />
+					<Route path="Partners" element={<Partners />} />
+					<Route path="Shop" element={<Shop />} />
 				</Route>
 			</Routes>
 		</>

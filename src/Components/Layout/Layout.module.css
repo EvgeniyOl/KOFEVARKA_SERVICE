@@ -124,3 +124,21 @@
 .liFooterPhoneNumber:hover {
   box-shadow: 0 0 30px rgb(223, 175, 16), 0 0 60px rgb(223, 175, 16);
 }
+.liFooterTelega {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #212529;
+}
+.liFooterTelega:hover {
+  box-shadow: 0 0 30px rgb(34, 63, 168), 0 0 60px rgb(34, 63, 168);
+}
+
+/* ---body--- */
+.body {
+  min-height: 100vh;
+}

@@ -10,6 +10,8 @@ import WatsUp from './../../Assets/whatsapp (1).png';
 import Vk from './../../Assets/vk.png';
 import PhoneNumber from './../../Assets/telephone-call.png';
 import Youtube from './../../Assets/youtube.png';
+import Telega from './../../Assets/telegram.png'
+import { motion } from "framer-motion"
 
 const Layout = (props) => {
   return (
@@ -36,36 +38,59 @@ const Layout = (props) => {
               <Nav.Link className={s.link} href="/About">
                 О нас
               </Nav.Link>
-              <Nav.Link className={s.link} href="/Contacts">
-                Контакты
+              <Nav.Link className={s.link} href="/Service">
+                Сервис
+              </Nav.Link>
+              <Nav.Link className={s.link} href="/Partners">
+                Партнеры
+              </Nav.Link>
+              <Nav.Link className={s.link} href="/Shop">
+                Магазин
               </Nav.Link>
             </Nav>
           </NavbarCollapse>
         </Container>
       </Navbar>
 
-      <Outlet />
+      <body className={s.body}>
+        <Outlet />
+      </body>
 
       <footer className={s.footerContainer}>
         <ul className={s.ulFooter}>
-          <li className={s.liFooterInstagram}>
-            <img className={s.icon} src={instagram} alt="instagram" />
-          </li>
-          <li className={s.liFooterWatsUp}>
-            <img className={s.icon} src={WatsUp} alt="WatsUp" />
-          </li>
-          <li className={s.liFooterVk}>
-            <img className={s.icon} src={Vk} alt="Vk" />
-          </li>
-          <li className={s.liFooterYoutube}>
-            <img className={s.icon} src={Youtube} alt="Youtube" />
-          </li>
-          <li className={s.liFooterPhoneNumber}>
-            <img className={s.icon} src={PhoneNumber} alt="PhoneNumber" />
-          </li>
+          <motion.li className={s.liFooterInstagram} whileHover={{ scale: 1.2, }}>
+            <a href="https://www.instagram.com/kofevarka_service/"><img className={s.icon} src={instagram} alt="instagram" /></a>
+          </motion.li>
+          <motion.li className={s.liFooterVk} whileHover={{ scale: 1.2, }}>
+            <a href="https://vk.com/kofevarkaservise">
+              <img className={s.icon} src={Vk} alt="Vk" />
+            </a>
+          </motion.li>
+          <motion.li className={s.liFooterWatsUp} whileHover={{ scale: 1.2, }}>
+            <a href="https://api.whatsapp.com/send?phone=79039271376">
+              <img className={s.icon} src={WatsUp} alt="WatsUp" />
+            </a>
+          </motion.li>
+          <motion.li className={s.liFooterTelega} whileHover={{ scale: 1.2, }}>
+            <a href="https://t.me/kofevarkaservice">
+              <img className={s.icon} src={Telega} alt="Telega" />
+            </a>
+          </motion.li>
+          <motion.li className={s.liFooterYoutube} whileHover={{ scale: 1.2, }}>
+            <a href="https://www.youtube.com/channel/UCy4-IIw4qW8K8fVzOlRkaBQ/videos">
+              <img className={s.icon} src={Youtube} alt="Youtube" />
+            </a>
+          </motion.li>
+          <motion.li className={s.liFooterPhoneNumber} whileHover={{ scale: 1.2, }}>
+            <a href="tel:+79039271376">
+              <img className={s.icon} src={PhoneNumber} alt="PhoneNumber" />
+            </a>
+          </motion.li>
         </ul>
         <hr />
-        <a href="https://github.com/EvgeniyOl">© 2022 Created by Evgeniy Olyanskii</a>
+        <a href="https://github.com/EvgeniyOl">
+          © 2022 Created by Evgeniy Olyanskii
+        </a>
       </footer>
     </>
   );
