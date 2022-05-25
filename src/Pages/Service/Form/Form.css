@@ -1,0 +1,12 @@
+.errors {
+  color: rgb(172, 25, 25);
+  font-size: 15px;
+}
+.warning {
+  padding-top: 15px;
+  color: rgb(170, 4, 4);
+}
+.modalTittle {
+  text-align: center;
+  color: rgb(21, 123, 146);
+}

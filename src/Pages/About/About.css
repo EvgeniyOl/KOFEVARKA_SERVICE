@@ -1,0 +1,12 @@
+.containerAbout {
+  padding-top: 10px;
+}
+.map {
+  padding-top: 10px;
+}
+.about_contacts {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

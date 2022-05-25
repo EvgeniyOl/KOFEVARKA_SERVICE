@@ -1,61 +1,68 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import s from './Partners.module.css';
-import saeco from './../../Assets/saeco1.webp';
-import etna from './../../Assets/etna.jpeg';
+import './Partners.css';
+import saecoLogo from './../../Assets/saeco.svg';
+import delongi from './../../Assets/delongiLogo.jpeg';
+import jira from './../../Assets/jiraLogo.webp';
+import marzocco from './../../Assets/marzoccoLogo.jpeg';
+import wmf from './../../Assets/wmfLogo.png';
+import nivona from './../../Assets/nivona.png';
+import { motion } from 'framer-motion';
+import gaggia from './../../Assets/gaggiaLogo.jpeg';
+import franke from './../../Assets/frankeLogo.png';
+import bork from './../../Assets/borkLogo.jpeg';
 
 const Partners = (props) => {
   return (
-    <div className={s.container}>
-      <div className={s.info}>
-        <span className={s.tittle}>Основные услуги нашей компании:</span>
-        <hr />
-        <p>
-          Ремонт и обслуживание бытового и профессионального кофейного
-          оборудования.
-        </p>
-        <p>Большой ассортимент кофе, чая, эксклюзивного варенья, сиропов.</p>
-        <p>Формируем подарки на ваш вкус и любой бюджет.</p>
-        <p>
-          В продаже имеется профессиональная химия для кофейного оборудования.
-        </p>
-
-        <span className={s.tittleDiller}>Являемся официальными дилерами</span>
-        <div className="container-fluid">
-          <div class="row d-flex">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-              <Card className="bg-dark" style={{ width: '16rem' }}>
-                <Card.Title className="text-center text-light">
-                  Saeco
-                </Card.Title>
-                <Card.Img variant="top" src={saeco} alt="..." />
-                <Card.Body>
-                  <div className={s.cardTextWrapper}>
-                    <Card.Text className="text-light text-center">
-                      Автоматические эспрессо-кофемашины Saeco обеспечивают
-                      приготовление превосходного кофе и безграничные
-                      возможности выбора.
-                    </Card.Text>
-                  </div>
-                </Card.Body>
-              </Card>
+    <div className="containerPartners">
+      <div className="container tittlePartners">
+        <div className="row p-5">
+          <div className="col">
+            <h3>Наши действующие партнеры</h3>
+          </div>
+        </div>
+        <div className="row line1">
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="partnerCard">
+              <motion.img
+                whileHover={{ scale: 2 }}
+                src={saecoLogo}
+                alt="saecoLogo"
+              />
+              <motion.img
+                whileHover={{ scale: 2 }}
+                src={delongi}
+                alt="delongi"
+              />
+              <motion.img whileHover={{ scale: 2 }} src={jira} alt="jira" />
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-              <Card className="bg-dark" style={{ width: '16rem' }}>
-                <Card.Title className="text-center text-light">
-                  Кофе 'Этна'
-                </Card.Title>
-                <Card.Img variant="top" src={etna} alt="..." />
-                <Card.Body>
-                  <div className={s.cardTextWrapper}>
-                    <Card.Text className="text-light text-center">
-                      Наши давние партнеры - обжарочная компания из Тюмени.
-                      <br />
-                      Большой выбор кофе, всегда свежая обжарка!
-                    </Card.Text>
-                  </div>
-                </Card.Body>
-              </Card>
+          </div>
+        </div>
+
+        <div className="row line2">
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="partnerCard">
+              <motion.img
+                whileHover={{ scale: 2 }}
+                src={marzocco}
+                alt="saecoLogo"
+              />
+              <motion.img whileHover={{ scale: 2 }} src={wmf} alt="delongi" />
+              <motion.img whileHover={{ scale: 2 }} src={nivona} alt="jira" />
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="partnerCard">
+              <motion.img
+                whileHover={{ scale: 2 }}
+                src={gaggia}
+                alt="saecoLogo"
+              />
+              <motion.img
+                whileHover={{ scale: 2 }}
+                src={franke}
+                alt="delongi"
+              />
+              <motion.img whileHover={{ scale: 2 }} src={bork} alt="jira" />
             </div>
           </div>
         </div>

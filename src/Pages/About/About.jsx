@@ -1,10 +1,14 @@
 import React from 'react';
-import s from './About.module.css';
 import MapYandex from './Map/Map';
+import './About.css';
+import PhoneNumber from './../../Assets/telephone-call.png';
+import WatsUp from './../../Assets/whatsapp (1).png';
+import Telega from './../../Assets/telegram.png';
+import { motion } from 'framer-motion';
 
 const About = (props) => {
   return (
-    <div className={s.container}>
+    <div className='containerAbout'>
       <div className="container-fluid">
         <div className="row d-flex p-0 m-0 justify-content-center">
           <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 pt-4 text-center justify-content-center p-0 border border-info">
@@ -12,6 +16,27 @@ const About = (props) => {
             <p>Омск, ул. Декабристов, 116/1, 644046</p>
             <h5>Телефон:</h5>
             <p>8 (903) 927-13-76</p>
+            <div className='showContacts about_contacts'>
+              <ul className='ulshowContacts'>
+                <motion.li className='showContactsTelega' whileHover={{ scale: 1.2, }}>
+                  <a href="https://t.me/kofevarkaservice">
+                    <img className='icon' src={Telega} alt="Telega" />
+                  </a>
+                </motion.li>
+
+                <motion.li className='showContactsWatsup' whileHover={{ scale: 1.2, }}>
+                  <a href="https://api.whatsapp.com/send?phone=79039271376">
+                    <img className='icon' src={WatsUp} alt="WatsUp" />
+                  </a>
+                </motion.li>
+
+                <motion.li className='showContactsPhone' whileHover={{ scale: 1.2, }}>
+                  <a href="tel:+79039271376">
+                    <img className='icon' src={PhoneNumber} alt="PhoneNumber" />
+                  </a>
+                </motion.li>
+              </ul>
+            </div>
           </div>
           <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 pt-4 justify-content-center p-0 border border-info border-left-0">
             <div className="row d-flex justify-content-center text-center p-0">
@@ -64,14 +89,7 @@ const About = (props) => {
           </div>
         </div>
       </div>
-      <div className="container-fluid bg-dark text-light">
-        <div className="row">
-          <div className="col p-2">
-            <h3>Отзывы о нашей компании</h3>
-          </div>
-        </div>
-      </div>
-      <div className={s.map}>
+      <div className='map'>
         <MapYandex />
       </div>
     </div>

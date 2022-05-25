@@ -67,7 +67,7 @@
 }
 .button:hover .button_linetop {
   left: 100%;
-  transition: 1s;
+  transition: 0.5s;
   transition-delay: 0.25s;
 }
 .button_linetop {
@@ -81,7 +81,7 @@
 }
 .button:hover .button_linebottom {
   right: 100%;
-  transition: 1s;
+  transition: 0.5s;
   transition-delay: 0.25s;
 }
 .button_linebottom {
@@ -95,7 +95,7 @@
 }
 .button:hover .button_lineleft {
   bottom: 100%;
-  transition: 1s;
+  transition: 0.5s;
   transition-delay: 0s;
 }
 .button_lineleft {
@@ -109,7 +109,7 @@
 }
 .button:hover .button_lineright {
   top: 100%;
-  transition: 1s;
+  transition: 0.5s;
   transition-delay: 0s;
 }
 .button_lineright {
@@ -123,9 +123,8 @@
 }
 .button:hover {
   box-shadow: 0 0 10px #980648, 0 0 40px #ff682f, 0 0 80px #ff682f;
-  background-color: #980648;
   color: #f6f5f8;
-  transition-delay: 1s;
+  transition-delay: 0.6s;
 }
 @media (max-width: 1400px) {
   .button {

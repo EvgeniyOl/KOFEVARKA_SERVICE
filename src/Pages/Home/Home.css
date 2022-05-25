@@ -163,9 +163,8 @@
   }
 }
 
-/* --blackBlock-- */
-.blackBlock {
-  height: 500px;
+/* --aboutBlock-- */
+.aboutBlock {
   background-color: #212529;
   color: #ffffff;
 }
