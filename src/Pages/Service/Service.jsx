@@ -36,12 +36,26 @@ const Service = (props) => {
   return (
     <>
       <div className="container-fluid serviceContainer">
-        <div className="row p-0">
+        <div className="row p-0 d-flex justify-content-center">
           <p className="service_tittle">Занимаемся ремонтом любой сложности</p>
-
-          <Button onClick={handleShow} className="btn outline-info">
+          <div className="d-flex col-lg-4 justify-content-center">
+            <a
+              onClick={handleShow}
+              type="button"
+              className="service__button"
+            >
+              <span className="service__button__linetop"></span>
+              <span className="service__button__lineright"></span>
+              <span className="service__button__linebottom"></span>
+              <span className="service__button__lineleft"></span>
+              Оставить заявку
+            </a>
+          </div>
+        </div>
+        <div className="row p-0">
+          {/* <Button onClick={handleShow} className="btn outline-info service__btn">
             Оставить заявку на ремонт
-          </Button>
+          </Button> */}
           <Modal show={show} onHide={handleClose}>
             <ModalForm />
           </Modal>

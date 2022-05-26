@@ -3,7 +3,7 @@ import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import { Outlet } from 'react-router-dom';
-import s from './Layout.module.css';
+import './Layout.css';
 import logo from './../../Assets/logo.jpeg';
 import instagram from './../../Assets/instagram.png';
 import WatsUp from './../../Assets/whatsapp (1).png';
@@ -24,27 +24,26 @@ const Layout = (props) => {
               alt="logo"
               height={40}
               width={40}
-              class="d-inline-block align-top"
-              className={s.logo}
+              className="logo d-inline-block align-top"
             />
             Cofevarka Service
           </NavbarBrand>
           <NavbarToggle aria-controls="responsive-navbar-nav" />
           <NavbarCollapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link className={s.link} href="/">
+              <Nav.Link className='link' href="/">
                 Главная
               </Nav.Link>
-              <Nav.Link className={s.link} href="/About">
+              <Nav.Link className="link" href="/About">
                 О нас
               </Nav.Link>
-              <Nav.Link className={s.link} href="/Service">
+              <Nav.Link className="link" href="/Service">
                 Сервис
               </Nav.Link>
-              <Nav.Link className={s.link} href="/Partners">
+              <Nav.Link className="link" href="/Partners">
                 Партнеры
               </Nav.Link>
-              <Nav.Link className={s.link} href="/Shop">
+              <Nav.Link className="link" href="/Shop">
                 Магазин
               </Nav.Link>
             </Nav>
@@ -52,38 +51,38 @@ const Layout = (props) => {
         </Container>
       </Navbar>
 
-      <body className={s.body}>
+      <body className='body'>
         <Outlet />
       </body>
 
-      <footer className={s.footerContainer}>
-        <ul className={s.ulFooter}>
-          <motion.li className={s.liFooterInstagram} whileHover={{ scale: 1.2, }}>
-            <a href="https://www.instagram.com/kofevarka_service/"><img className={s.icon} src={instagram} alt="instagram" /></a>
+      <footer className='footerContainer'>
+        <ul className='ulFooter'>
+          <motion.li className='liFooterInstagram' whileHover={{ scale: 1.2, }}>
+            <a href="https://www.instagram.com/kofevarka_service/"><img className='icon' src={instagram} alt="instagram" /></a>
           </motion.li>
-          <motion.li className={s.liFooterVk} whileHover={{ scale: 1.2, }}>
+          <motion.li className='liFooterVk' whileHover={{ scale: 1.2, }}>
             <a href="https://vk.com/kofevarkaservise">
-              <img className={s.icon} src={Vk} alt="Vk" />
+              <img className='icon' src={Vk} alt="Vk" />
             </a>
           </motion.li>
-          <motion.li className={s.liFooterWatsUp} whileHover={{ scale: 1.2, }}>
+          <motion.li className='liFooterWatsUp' whileHover={{ scale: 1.2, }}>
             <a href="https://api.whatsapp.com/send?phone=79039271376">
-              <img className={s.icon} src={WatsUp} alt="WatsUp" />
+              <img className='icon' src={WatsUp} alt="WatsUp" />
             </a>
           </motion.li>
-          <motion.li className={s.liFooterTelega} whileHover={{ scale: 1.2, }}>
+          <motion.li className='liFooterTelega' whileHover={{ scale: 1.2, }}>
             <a href="https://t.me/kofevarkaservice">
-              <img className={s.icon} src={Telega} alt="Telega" />
+              <img className='icon' src={Telega} alt="Telega" />
             </a>
           </motion.li>
-          <motion.li className={s.liFooterYoutube} whileHover={{ scale: 1.2, }}>
+          <motion.li className='liFooterYoutube' whileHover={{ scale: 1.2, }}>
             <a href="https://www.youtube.com/channel/UCy4-IIw4qW8K8fVzOlRkaBQ/videos">
-              <img className={s.icon} src={Youtube} alt="Youtube" />
+              <img className='icon' src={Youtube} alt="Youtube" />
             </a>
           </motion.li>
-          <motion.li className={s.liFooterPhoneNumber} whileHover={{ scale: 1.2, }}>
+          <motion.li className='liFooterPhoneNumber' whileHover={{ scale: 1.2, }}>
             <a href="tel:+79039271376">
-              <img className={s.icon} src={PhoneNumber} alt="PhoneNumber" />
+              <img className='icon' src={PhoneNumber} alt="PhoneNumber" />
             </a>
           </motion.li>
         </ul>

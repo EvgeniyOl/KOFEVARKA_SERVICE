@@ -13,7 +13,7 @@ const coordinates = [
 const MapYandex = () => (
   <YMaps query={{ lang: "ru_RU", load: "package.full" }}>
     <Map width={'100%'} height={'300px'} defaultState={mapData}>
-      {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+      {coordinates.map((coordinate, index) => <Placemark key={index} geometry={coordinate} />)}
     </Map>
   </YMaps >
 );
