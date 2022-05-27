@@ -53,9 +53,6 @@ const Service = (props) => {
           </div>
         </div>
         <div className="row p-0">
-          {/* <Button onClick={handleShow} className="btn outline-info service__btn">
-            Оставить заявку на ремонт
-          </Button> */}
           <Modal show={show} onHide={handleClose}>
             <ModalForm />
           </Modal>

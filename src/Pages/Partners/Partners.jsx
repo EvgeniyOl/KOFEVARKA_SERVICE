@@ -35,6 +35,7 @@ const Partners = (props) => {
               />
               <motion.img whileHover={{ scale: 2 }} src={jira} alt="jira" />
             </div>
+            <hr />
           </div>
         </div>
 
@@ -49,6 +50,7 @@ const Partners = (props) => {
               <motion.img whileHover={{ scale: 2 }} src={wmf} alt="delongi" />
               <motion.img whileHover={{ scale: 2 }} src={nivona} alt="jira" />
             </div>
+            <hr />
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="partnerCard">
@@ -64,6 +66,15 @@ const Partners = (props) => {
               />
               <motion.img whileHover={{ scale: 2 }} src={bork} alt="jira" />
             </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <div className="container-fluid p-0 m-0">
+        <div className="row p-0 m-0">
+          <div className="col p-0 m-0">
+
           </div>
         </div>
       </div>

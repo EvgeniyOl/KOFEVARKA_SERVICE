@@ -59,13 +59,17 @@ const ModalForm = () => {
           <Form.Group>
             <Form.Label>Номер телефона</Form.Label>
             <Form.Control
-              placeholder="8-913-xxx-xx-xx"
+              placeholder="+7913xxxxxxx"
               {...register('PhoneNumber', {
                 required: 'Поле обязательно к заполнению!',
                 type: 'numbers',
                 minLength: {
                   value: 11,
                   message: 'Минимум 11 символов!',
+                },
+                maxLength: {
+                  value: 12,
+                  message: 'Максимум 12 символов!',
                 },
               })}
             />

@@ -34,14 +34,8 @@ const Layout = (props) => {
               <Nav.Link className='link' href="/">
                 Главная
               </Nav.Link>
-              <Nav.Link className="link" href="/About">
-                О нас
-              </Nav.Link>
               <Nav.Link className="link" href="/Service">
                 Сервис
-              </Nav.Link>
-              <Nav.Link className="link" href="/Partners">
-                Партнеры
               </Nav.Link>
               <Nav.Link className="link" href="/Shop">
                 Магазин

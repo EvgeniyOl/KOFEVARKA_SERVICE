@@ -15,12 +15,18 @@ const Shop = (props) => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <h1 className="text-center text-dark">Kofevarka Shop</h1>
+              <div className="shopHeader container">
+                <a href="">Новые Кофемашины</a>
+                <a href="">Б/У Кофемашины</a>
+                <a href="">Кофе</a>
+                <a href="">Химия</a>
+                <a href="">Подарочные наборы</a>
+              </div>
 
-              <div className="row justify-content-center">
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <Card className="bg-dark" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center text-light tittle p-1">
+              {/* <div className="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+                  <card className="cardMain" style={{ width: '16rem' }}>
+                    <Card.Title className="text-center tittle p-1">
                       Новые кофемашины
                     </Card.Title>
                     <Card.Img
@@ -31,17 +37,17 @@ const Shop = (props) => {
                     />
                     <Card.Body>
                       <div className='cardTextWrapper'>
-                        <Card.Text className="text-light text-center">
+                        <Card.Text className="text-center">
                           Мы являемся официальными дилерами Saeco ...
                         </Card.Text>
                       </div>
                     </Card.Body>
-                  </Card>
+                  </card>
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <Card className="bg-dark" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center text-light p-1">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+                  <card className="cardMain" style={{ width: '16rem' }}>
+                    <Card.Title className="text-center p-1">
                       Б/У кофемашины
                     </Card.Title>
                     <Card.Img
@@ -52,18 +58,18 @@ const Shop = (props) => {
                     />
                     <Card.Body>
                       <div className='cardTextWrapper'>
-                        <Card.Text className="text-light text-center">
+                        <Card.Text className="text-center">
                           Куплю дешево!
                           <br /> Продам дорого!
                         </Card.Text>
                       </div>
                     </Card.Body>
-                  </Card>
+                  </card>
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <Card className="bg-dark" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center text-light p-1">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+                  <card className="cardMain" style={{ width: '16rem' }}>
+                    <Card.Title className="text-center p-1">
                       Профессиональная химия
                     </Card.Title>
                     <Card.Img
@@ -74,17 +80,17 @@ const Shop = (props) => {
                     />
                     <Card.Body>
                       <div className='cardTextWrapper'>
-                        <Card.Text className="text-light text-center">
+                        <Card.Text className="text-center">
                           Уничтожает 147% бактерий!
                         </Card.Text>
                       </div>
                     </Card.Body>
-                  </Card>
+                  </card>
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <Card className="bg-dark" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center text-light p-1">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+                  <card className="cardMain" style={{ width: '16rem' }}>
+                    <Card.Title className="text-center p-1">
                       Все что можно заварить
                     </Card.Title>
                     <Card.Img
@@ -95,17 +101,17 @@ const Shop = (props) => {
                     />
                     <Card.Body>
                       <div className='cardTextWrapper'>
-                        <Card.Text className="text-light text-center">
+                        <Card.Text className="text-center">
                           Лучший 3 в 1 в городе!
                         </Card.Text>
                       </div>
                     </Card.Body>
-                  </Card>
+                  </card>
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <Card className="bg-dark" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center text-light p-1">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+                  <card className="cardMain" style={{ width: '16rem' }}>
+                    <Card.Title className="text-center p-1">
                       Свежие шишки!
                     </Card.Title>
                     <Card.Img
@@ -116,17 +122,17 @@ const Shop = (props) => {
                     />
                     <Card.Body>
                       <div className='cardTextWrapper'>
-                        <Card.Text className="text-light text-center">
+                        <Card.Text className="text-center">
                           Не эти, другие...
                         </Card.Text>
                       </div>
                     </Card.Body>
-                  </Card>
+                  </card>
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <Card className="bg-dark" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center text-light p-1">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+                  <card className="cardMain" style={{ width: '16rem' }}>
+                    <Card.Title className="text-center p-1">
                       Подарочные наборы
                     </Card.Title>
                     <Card.Img
@@ -137,15 +143,15 @@ const Shop = (props) => {
                     />
                     <Card.Body>
                       <div className='cardTextWrapper'>
-                        <Card.Text className="text-light text-center">
+                        <Card.Text className="text-center">
                           Не знаешь что подарить?
                           <br /> Купи набор!
                         </Card.Text>
                       </div>
                     </Card.Body>
-                  </Card>
+                  </card>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

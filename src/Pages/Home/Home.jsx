@@ -46,7 +46,7 @@ const Home = (props) => {
                 <br /> Техническое Обслуживание будет Бесплатным!
               </p>
               <motion.p whileHover={{ scale: 1.5 }}>
-                <a href="#">Узнать подробности</a>
+                <a href="/Shop">Перейти в магазин</a>
               </motion.p>
             </Carousel.Caption>
           </Carousel.Item>

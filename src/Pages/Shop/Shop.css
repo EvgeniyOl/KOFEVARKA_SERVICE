@@ -1,4 +1,29 @@
+.shopBlock {
+  background-color: #cdcdc0;
+  padding-bottom: 20px;
+  margin-top: 66px;
+}
+/* ---shopHeader--- */
+.shopHeader {
+  background-color: #626d71;
+  min-height: 80px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopHeader a {
+  text-decoration: none;
+  color: #cdab81;
+}
+
 /* ---card--- */
+.cardMain {
+  position: relative;
+  background-color: #626d71;
+  border-radius: 2%;
+  color: #cdab81;
+}
 .cardImg {
   max-width: 300px;
   max-height: 250px;
