@@ -1,157 +1,75 @@
 import React from 'react';
 import './Shop.css';
-import { Card } from 'react-bootstrap';
-import saeco from './../../Assets/saeco1.webp';
 import by from './../../Assets/by2.jpeg';
 import him from './../../Assets/him.jpeg';
 import kofe from './../../Assets/3in1.webp';
 import shishki from './../../Assets/shishki.jpeg';
 import nabor from './../../Assets/nabor.jpeg';
+import pura from './../../Assets/1_pura.jpeg'
+import saeco from './../../Assets/saeco1.webp';
+import Categories from './Categories/Categories';
+import Basket from './Bascet/Basket';
+import ShopCard from './ShopCard/ShopCard.jsx';
 
 const Shop = (props) => {
   return (
     <>
-      <div className='shopBlock'>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="shopHeader container">
-                <a href="">Новые Кофемашины</a>
-                <a href="">Б/У Кофемашины</a>
-                <a href="">Кофе</a>
-                <a href="">Химия</a>
-                <a href="">Подарочные наборы</a>
+      <div className="shopBlock">
+        <div className="container-fluid p-0 m-0">
+          <div className="row p-0 m-0">
+            <div className="col p-0 m-0">
+              <div className="shopHeader container-fluid p-0 m-0">
+                <Categories
+                  items={[
+                    'Новые Кофемашины',
+                    'Б/У Кофемашины',
+                    'Кофе',
+                    'Химия',
+                    'Подарочные наборы',
+                  ]}
+                />
+                <Basket />
               </div>
-
-              {/* <div className="row justify-content-center">
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <card className="cardMain" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center tittle p-1">
-                      Новые кофемашины
-                    </Card.Title>
-                    <Card.Img
-                      className='cardImg'
-                      variant="top"
-                      src={saeco}
-                      alt="..."
+              <div className="container-fluid p-0 m-0">
+                <div className="row d-flex p-0 m-0">
+                  <div className="col-lg-4 col-md-6 col-sm-12 p-0">
+                    <ShopCard
+                      cardTittle={'Новая кофемашина'}
+                      cardName={'Saeco Xelsis'}
+                      cardText={'Самая технологичная кофемашина Saeco'}
+                      cardImg={saeco}
+                      cardPrice={'25.000р.'}
                     />
-                    <Card.Body>
-                      <div className='cardTextWrapper'>
-                        <Card.Text className="text-center">
-                          Мы являемся официальными дилерами Saeco ...
-                        </Card.Text>
-                      </div>
-                    </Card.Body>
-                  </card>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <card className="cardMain" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center p-1">
-                      Б/У кофемашины
-                    </Card.Title>
-                    <Card.Img
-                      className='cardImg'
-                      variant="top"
-                      src={by}
-                      alt="..."
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-12 p-0">
+                    <ShopCard
+                      cardTittle={'Кофемашина Б/У'}
+                      cardName={'FRANKE'}
+                      cardText={'Pura'}
+                      cardImg={pura}
+                      cardPrice={'35.000р.'}
                     />
-                    <Card.Body>
-                      <div className='cardTextWrapper'>
-                        <Card.Text className="text-center">
-                          Куплю дешево!
-                          <br /> Продам дорого!
-                        </Card.Text>
-                      </div>
-                    </Card.Body>
-                  </card>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <card className="cardMain" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center p-1">
-                      Профессиональная химия
-                    </Card.Title>
-                    <Card.Img
-                      className='cardImg'
-                      variant="top"
-                      src={him}
-                      alt="..."
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-12 p-0">
+                    <ShopCard
+                      cardTittle={'Новая кофемашина'}
+                      cardName={'Saeco'}
+                      cardText={'Мы являемся официальными дилерами Saeco ...'}
+                      cardImg={saeco}
+                      cardPrice={'500р.'}
                     />
-                    <Card.Body>
-                      <div className='cardTextWrapper'>
-                        <Card.Text className="text-center">
-                          Уничтожает 147% бактерий!
-                        </Card.Text>
-                      </div>
-                    </Card.Body>
-                  </card>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <card className="cardMain" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center p-1">
-                      Все что можно заварить
-                    </Card.Title>
-                    <Card.Img
-                      className='cardImg'
-                      variant="top"
-                      src={kofe}
-                      alt="..."
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-12 p-0">
+                    <ShopCard
+                      cardTittle={'Кофе "Этна"'}
+                      cardName={'Премиум'}
+                      cardText={'Арабика 90% Робуста 10% Средняя обжарка'}
+                      cardImg={kofe}
+                      cardPrice={'2.000р.'}
                     />
-                    <Card.Body>
-                      <div className='cardTextWrapper'>
-                        <Card.Text className="text-center">
-                          Лучший 3 в 1 в городе!
-                        </Card.Text>
-                      </div>
-                    </Card.Body>
-                  </card>
+                  </div>
                 </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <card className="cardMain" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center p-1">
-                      Свежие шишки!
-                    </Card.Title>
-                    <Card.Img
-                      className='cardImg'
-                      variant="top"
-                      src={shishki}
-                      alt="..."
-                    />
-                    <Card.Body>
-                      <div className='cardTextWrapper'>
-                        <Card.Text className="text-center">
-                          Не эти, другие...
-                        </Card.Text>
-                      </div>
-                    </Card.Body>
-                  </card>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
-                  <card className="cardMain" style={{ width: '16rem' }}>
-                    <Card.Title className="text-center p-1">
-                      Подарочные наборы
-                    </Card.Title>
-                    <Card.Img
-                      className='cardImg'
-                      variant="top"
-                      src={nabor}
-                      alt="..."
-                    />
-                    <Card.Body>
-                      <div className='cardTextWrapper'>
-                        <Card.Text className="text-center">
-                          Не знаешь что подарить?
-                          <br /> Купи набор!
-                        </Card.Text>
-                      </div>
-                    </Card.Body>
-                  </card>
-                </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
