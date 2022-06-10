@@ -1,0 +1,42 @@
+.basket-container {
+  background-color: #cdcdc0;
+  border-radius: 30px;
+  color: black;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border: 2px solid yellow;
+  padding-top: 100px;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.basket-header {
+  display: flex;
+  justify-content: space-around;
+  color: #626d70;
+}
+.basket-body {
+  height: 300px;
+}
+.basket-footer {
+  color: #626d70;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.basket-price {
+  color: rgb(218, 72, 4);
+}
+.basket-pay {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.basket-img {
+  display: flex;
+  align-items: center;
+}
+.basket-img img {
+  width: 50px;
+  margin-right: 30px;
+}

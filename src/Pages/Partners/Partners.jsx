@@ -1,15 +1,15 @@
 import React from 'react';
 import './Partners.css';
-import saecoLogo from './../../Assets/saeco.svg';
-import delongi from './../../Assets/delongiLogo.jpeg';
-import jira from './../../Assets/jiraLogo.webp';
-import marzocco from './../../Assets/marzoccoLogo.jpeg';
-import wmf from './../../Assets/wmfLogo.png';
-import nivona from './../../Assets/nivona.png';
+import saecoLogo from './../../Assets/img/saeco.svg';
+import delongi from './../../Assets/img/delongiLogo.jpeg';
+import jira from './../../Assets/img/jiraLogo.webp';
+import marzocco from './../../Assets/img/marzoccoLogo.jpeg';
+import wmf from './../../Assets/img/wmfLogo.png';
+import nivona from './../../Assets/img/nivona.png';
 import { motion } from 'framer-motion';
-import gaggia from './../../Assets/gaggiaLogo.jpeg';
-import franke from './../../Assets/frankeLogo.png';
-import bork from './../../Assets/borkLogo.jpeg';
+import gaggia from './../../Assets/img/gaggiaLogo.jpeg';
+import franke from './../../Assets/img/frankeLogo.png';
+import bork from './../../Assets/img/borkLogo.jpeg';
 
 const Partners = (props) => {
   return (

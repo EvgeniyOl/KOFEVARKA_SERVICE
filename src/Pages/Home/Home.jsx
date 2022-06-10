@@ -1,10 +1,10 @@
 import React from 'react';
 import './Home.css';
 import { Carousel } from 'react-bootstrap';
-import slide1 from './../../Assets/slide1.jpg';
-import slide2 from './../../Assets/roster.jpeg';
-import slide3 from './../../Assets/slide2.jpeg';
-import slide4 from './../../Assets/slide2.webp';
+import slide1 from './../../Assets/img/slide1.webp';
+import slide2 from './../../Assets/img/roster.webp';
+import slide3 from './../../Assets/img/slide2.webp';
+import slide4 from './../../Assets/img/slide2.webp';
 import ContactsButton from '../ContactsButton/ContactsButton';
 import { motion } from 'framer-motion';
 import About from '../About/About';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PhoneNumber from './../../Assets/telephone-call.png';
-import WatsUp from './../../Assets/whatsapp (1).png';
-import Telega from './../../Assets/telegram.png';
+import PhoneNumber from './../../Assets/img/telephone-call.png';
+import WatsUp from './../../Assets/img/whatsapp (1).png';
+import Telega from './../../Assets/img/telegram.png';
 import { CSSTransition } from 'react-transition-group';
 import './ContactsButton.css';
 import { motion } from 'framer-motion';

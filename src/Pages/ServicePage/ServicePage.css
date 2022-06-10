@@ -43,7 +43,7 @@
 
 .accordionBody li::before {
   content: '';
-  background-image: url(/src/Assets/160426-cddc39.svg);
+  background-image: url(/src/Assets/img/160426-cddc39.svg);
   width: 25px;
   height: 25px;
   position: absolute;

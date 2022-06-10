@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "cardTittle": "Этна",
+    "cardName": "Премиум",
+    "sizes": [250, 500, 1000],
+    "cardText": "Самый вкусный",
+    "cardPrice": 2300
+  },
+  {
+    "id": 1,
+    "cardTittle": "Этна",
+    "cardName": "классика",
+    "sizes": [250, 500, 1000],
+    "cardText": "сбалансированный",
+    "cardPrice": 2000
+  },
+  {
+    "id": 2,
+    "cardTittle": "Этна",
+    "cardName": "мягкий",
+    "sizes": [250, 500, 1000],
+    "cardText": "Под молочко",
+    "cardPrice": 2300
+  },
+  {
+    "id": 3,
+    "cardTittle": "Этна",
+    "cardName": "крепкий",
+    "sizes": [250, 500, 1000],
+    "cardText": "Смесь с робустой",
+    "cardPrice": 2300
+  },
+  {
+    "id": 4,
+    "cardTittle": "bravos",
+    "cardName": "бразилия",
+    "sizes": [250, 500],
+    "cardText": "умеренный, шоколад, орех",
+    "cardPrice": 2300
+  },
+  {
+    "id": 5,
+    "cardTittle": "bravos",
+    "cardName": "Эфиопия",
+    "sizes": [250, 500],
+    "cardText": "С кислинкой, ягодный",
+    "cardPrice": 2800
+  },
+  {
+    "id": 6,
+    "cardTittle": "bravos",
+    "cardName": "Мексика",
+    "sizes": [250, 500],
+    "cardText": "умеренный, шоколад, орех",
+    "cardPrice": 1700
+  }
+]

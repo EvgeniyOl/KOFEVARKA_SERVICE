@@ -1,41 +1,47 @@
 import React, { useState } from 'react';
 import './ShopCard.css';
+import etna from './../../../Assets/img/etna-pix.webp';
 
-const ShopCard = ({ cardTittle, cardImg, cardName, cardText, cardPrice }) => {
-  const [count, setCount] = useState(0);
 
-  const addButtonClick = () => {
-    setCount(count + 1);
-  };
+const ShopCard = ({
+  cardTittle,
+  cardName,
+  sizes,
+  cardText,
+  cardPrice,
+}) => {
+
+  const [activeSize, setActiveSize] = useState(0);
+
+  const [addItem, setAddItem] = useState(0);
   return (
     <>
-      <div class="containerCard">
-        <div class="card">
-          <div class="card-head">
-            <div class="product-detail">
+      <div className="containerCard">
+        <div className="card">
+          <div className="card-head">
+            <div className="product-detail">
               <h2>{cardTittle}</h2>
             </div>
-            <img src={cardImg} alt="logo" class="card-logo" />
+            <img src={etna} alt="logo" className="card-logo" />
           </div>
-          <div class="card-body">
-            <div class="product-desc">
-              <span class="product-title">
-                {cardName}
-                <span class="badge">New</span>
-              </span>
+          <div className="card-body">
+            <div className="product-desc">
+              <span className="product-title">{cardName}</span>
             </div>
-            <div class="product-properties">
+            <div className="product-properties">
               <div className="cardBodyText">{cardText}</div>
+              <div className="itemSize">
+                <ul className='sizeUl'>
+                  {sizes.map((size, index) => (<li key={index} onClick={() => setActiveSize(index)} className={activeSize === index ? 'activeSize' : ''}>{size} г.</li>))}
+                </ul>
+              </div>
 
-              <span class="product-price">
+              <span className="product-price">
                 <b>{cardPrice}</b>
               </span>
-              <button
-                onClick={addButtonClick}
-                className="btnAdd btn btn-warning"
-              >
-                + Добавить {count}
-              </button>
+              <button onClick={() => {
+                setAddItem(addItem + 1)
+              }} className="btnAdd btn btn-warning">+ Добавить {addItem}</button>
             </div>
           </div>
         </div>

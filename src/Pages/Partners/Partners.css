@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('./../../Assets/home-background.jpg') 50% / cover no-repeat;
+  background: url('./../../Assets/img/home-background.webp') 50% / cover no-repeat;
   background-position: center;
 }
 .tittlePartners {

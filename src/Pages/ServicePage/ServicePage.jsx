@@ -3,9 +3,9 @@ import { Accordion, Modal } from 'react-bootstrap';
 import ModalForm from '../Service/Form/Form';
 import './ServicePage.css';
 import { motion } from 'framer-motion';
-import PhoneNumber from './../../Assets/telephone-call.png';
-import WatsUp from './../../Assets/whatsapp (1).png';
-import Telega from './../../Assets/telegram.png';
+import PhoneNumber from './../../Assets/img/telephone-call.png';
+import WatsUp from './../../Assets/img/whatsapp (1).png';
+import Telega from './../../Assets/img/telegram.png';
 
 const ServicePage = (props) => {
   const [showServiceModal, setshowServiceModal] = useState(false);

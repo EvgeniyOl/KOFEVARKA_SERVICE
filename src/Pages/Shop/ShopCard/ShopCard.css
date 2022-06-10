@@ -1,12 +1,17 @@
 .containerCard {
-  width: 280px;
-  height: 500px;
-  margin: 30px auto;
+  max-width: 250px;
+  min-width: 250px;
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
   border-radius: 25px;
   box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+  min-width: 250px;
+  max-width: 250px;
+  width: 100vw;
 }
 
 .card-head {
@@ -98,4 +103,29 @@
 .btnAdd {
   position: absolute;
   bottom: 10px;
+}
+.itemSize {
+  margin: 10px;
+}
+.sizeUl {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.sizeUl li {
+  width: 120px;
+  height: 30px;
+  background-color: #fa782e;
+  border: 1px solid gray;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.sizeUl li.activeSize {
+  background-color: #11e95b;
+}
+.sizeUl li.activeSize:hover {
+  box-shadow: #cc6427;
 }

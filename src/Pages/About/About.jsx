@@ -1,9 +1,9 @@
 import React from 'react';
 import MapYandex from './Map/Map';
 import './About.css';
-import PhoneNumber from './../../Assets/telephone-call.png';
-import WatsUp from './../../Assets/whatsapp (1).png';
-import Telega from './../../Assets/telegram.png';
+import PhoneNumber from './../../Assets/img/telephone-call.png';
+import WatsUp from './../../Assets/img/whatsapp (1).png';
+import Telega from './../../Assets/img/telegram.png';
 import { motion } from 'framer-motion';
 
 const About = (props) => {

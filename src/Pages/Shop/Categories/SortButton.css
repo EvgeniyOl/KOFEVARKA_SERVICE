@@ -1,0 +1,33 @@
+.sortList {
+  display: flex;
+}
+.sortPopup {
+  font-size: 16px;
+  min-width: 200px;
+  height: 60px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  margin: 10px;
+}
+
+.sortPopup ul {
+  list-style: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+}
+.listItem {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.activeSort {
+  color: rgb(134, 220, 5);
+}

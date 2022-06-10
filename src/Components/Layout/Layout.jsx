@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
-import { Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import './Layout.css';
-import logo from './../../Assets/logo.jpeg';
-import instagram from './../../Assets/instagram.png';
-import WatsUp from './../../Assets/whatsapp (1).png';
-import Vk from './../../Assets/vk.png';
-import PhoneNumber from './../../Assets/telephone-call.png';
-import Youtube from './../../Assets/youtube.png';
-import Telega from './../../Assets/telegram.png'
+import logo from './../../Assets/img/logo.jpeg';
+import instagram from './../../Assets/img/instagram.png';
+import WatsUp from './../../Assets/img/whatsapp (1).png';
+import Vk from './../../Assets/img/vk.png';
+import PhoneNumber from './../../Assets/img/telephone-call.png';
+import Youtube from './../../Assets/img/youtube.png';
+import Telega from './../../Assets/img/telegram.png'
 import { motion } from "framer-motion"
 
 const Layout = (props) => {
@@ -31,15 +31,9 @@ const Layout = (props) => {
           <NavbarToggle aria-controls="responsive-navbar-nav" />
           <NavbarCollapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link className='link' href="/">
-                Главная
-              </Nav.Link>
-              <Nav.Link className="link" href="/Service">
-                Сервис
-              </Nav.Link>
-              <Nav.Link className="link" href="/Shop">
-                Магазин
-              </Nav.Link>
+              <Link className="link" to="/">Главная</Link>
+              <Link className="link" to="/Service">Сервис</Link>
+              <Link className="link" to="/Shop">Магазин</Link>
             </Nav>
           </NavbarCollapse>
         </Container>

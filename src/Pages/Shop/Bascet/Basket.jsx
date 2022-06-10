@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Basket.css';
 
 const Basket = (props) => {
   return (
     <>
-      <button className='btn btn-warning'>Корзина</button>
+      <Link to='/basket'><button className='btn btn-warning'>Корзина</button></Link>
     </>
   );
 };
