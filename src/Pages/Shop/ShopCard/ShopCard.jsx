@@ -4,6 +4,7 @@ import etna from './../../../Assets/img/etna-pix.webp';
 
 
 const ShopCard = ({
+  img,
   cardTittle,
   cardName,
   sizes,
@@ -22,7 +23,7 @@ const ShopCard = ({
             <div className="product-detail">
               <h2>{cardTittle}</h2>
             </div>
-            <img src={etna} alt="logo" className="card-logo" />
+            <img src={img} alt="logo" className="card-logo" />
           </div>
           <div className="card-body">
             <div className="product-desc">

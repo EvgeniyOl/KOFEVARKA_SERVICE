@@ -1,0 +1,31 @@
+.paginate-root {
+  margin: 20px;
+  list-style: none;
+}
+.paginate-root li {
+  display: inline-flex;
+}
+.paginate-root a:hover {
+  background-color: orange;
+  color: black;
+}
+
+.selected a {
+  background-color: orange;
+}
+
+.paginate-root a {
+  color: black;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  width: 45px;
+  height: 45px;
+  color: black;
+  border: 1px solid orange;
+  border-radius: 50%;
+  cursor: pointer;
+}

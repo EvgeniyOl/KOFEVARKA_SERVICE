@@ -1,11 +1,14 @@
 [
   {
     "id": 0,
+    "img": "file:///Users/evgeniy/Desktop/CoffeeService/etna-pix.webp",
     "cardTittle": "Этна",
     "cardName": "Премиум",
     "sizes": [250, 500, 1000],
     "cardText": "Самый вкусный",
-    "cardPrice": 2300
+    "cardPrice": 2300,
+    "categories": 1,
+    "rating": 10
   },
   {
     "id": 1,
@@ -13,7 +16,9 @@
     "cardName": "классика",
     "sizes": [250, 500, 1000],
     "cardText": "сбалансированный",
-    "cardPrice": 2000
+    "cardPrice": 2000,
+    "categories": 1,
+    "rating": 8
   },
   {
     "id": 2,
@@ -21,7 +26,9 @@
     "cardName": "мягкий",
     "sizes": [250, 500, 1000],
     "cardText": "Под молочко",
-    "cardPrice": 2300
+    "cardPrice": 2300,
+    "categories": 1,
+    "rating": 7
   },
   {
     "id": 3,
@@ -29,7 +36,9 @@
     "cardName": "крепкий",
     "sizes": [250, 500, 1000],
     "cardText": "Смесь с робустой",
-    "cardPrice": 2300
+    "cardPrice": 2300,
+    "categories": 1,
+    "rating": 8
   },
   {
     "id": 4,
@@ -37,7 +46,9 @@
     "cardName": "бразилия",
     "sizes": [250, 500],
     "cardText": "умеренный, шоколад, орех",
-    "cardPrice": 2300
+    "cardPrice": 2300,
+    "categories": 1,
+    "rating": 4
   },
   {
     "id": 5,
@@ -45,7 +56,9 @@
     "cardName": "Эфиопия",
     "sizes": [250, 500],
     "cardText": "С кислинкой, ягодный",
-    "cardPrice": 2800
+    "cardPrice": 2800,
+    "categories": 1,
+    "rating": 5
   },
   {
     "id": 6,
@@ -53,6 +66,28 @@
     "cardName": "Мексика",
     "sizes": [250, 500],
     "cardText": "умеренный, шоколад, орех",
-    "cardPrice": 1700
+    "cardPrice": 1700,
+    "categories": 1,
+    "rating": 3
+  },
+  {
+    "id": 7,
+    "cardTittle": "Порошковая",
+    "cardName": "",
+    "sizes": [50, 500],
+    "cardText": "Для чистки от кофейных масел",
+    "cardPrice": [800, 6000],
+    "categories": 2,
+    "rating": 3
+  },
+  {
+    "id": 8,
+    "cardTittle": "Раствор",
+    "cardName": "",
+    "sizes": [100, 1000],
+    "cardText": "Для чистки от кальция",
+    "cardPrice": 4000,
+    "categories": 2,
+    "rating": 3
   }
 ]
