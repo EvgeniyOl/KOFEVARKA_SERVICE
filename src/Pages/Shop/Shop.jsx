@@ -41,7 +41,6 @@ const Shop = (props) => {
               <div className="shopHeader container-fluid p-0 m-0">
                 <Categories value={categoryId} onClickCategory={(index) => setCategoryId(index)} />
                 <SortButton value={sortType} onClickSort={(index) => setSortType(index)} />
-                <Search />
                 <Basket />
               </div>
               <div className="container-fluid p-0 m-0 shopCardContainer">

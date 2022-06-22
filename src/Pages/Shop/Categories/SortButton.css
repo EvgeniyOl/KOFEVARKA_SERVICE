@@ -1,10 +1,12 @@
 .sortList {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sortPopup {
   font-size: 16px;
   min-width: 200px;
-  height: 60px;
+  max-height: 40px;
   border: 1px solid grey;
   border-radius: 20px;
   display: flex;
@@ -14,7 +16,9 @@
   background-color: white;
   margin: 10px;
 }
-
+.button-sort {
+  max-height: 40px;
+}
 .sortPopup ul {
   list-style: none;
   color: black;

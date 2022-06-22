@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useRef } from 'react';
+import { useEffect } from 'react';
 import { Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { setSort } from '../../../Redux/Slices/filterSlice';
@@ -22,8 +24,10 @@ const SortButton = ({ value, onClickSort }) => {
   }
   return (
     <>
-      <div className='sortList'>
-        <Button onClick={() => setVisiblePopup(!isVisiblePopup)} variant="outline-warning">Отсортировать</Button>{' '}
+      <div className='d-flex'>
+        <div className='sortList'>
+          <Button className='button-sort' onClick={() => setVisiblePopup(!isVisiblePopup)} variant="warning">Отсортировать</Button>{' '}
+        </div>
         {isVisiblePopup && (<div className="sortPopup">
           <ul>
             {sortMenu.map((obj, index) => <li
@@ -36,6 +40,7 @@ const SortButton = ({ value, onClickSort }) => {
           </ul>
         </div>)}
       </div>
+
     </>
   )
 }
