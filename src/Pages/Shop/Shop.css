@@ -9,7 +9,7 @@
   min-height: 80px;
   font-size: 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   padding: 0;
 }
@@ -17,4 +17,15 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.shopCardContainer a {
+  text-decoration: none;
+  color: black;
+}
+.shopCardContainer a:hover {
+  text-decoration: none;
+  color: black;
+}
+.basketStyle {
+  margin: 20px;
 }

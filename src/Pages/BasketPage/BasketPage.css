@@ -16,7 +16,8 @@
   color: #626d70;
 }
 .basket-body {
-  height: 300px;
+  min-height: 300px;
+  /* flex-direction: column; */
 }
 .basket-footer {
   color: #626d70;

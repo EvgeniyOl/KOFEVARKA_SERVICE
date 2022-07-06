@@ -7,9 +7,7 @@
     "sizes": [250, 500, 1000],
     "cardText": "Самый вкусный",
     "cardPrice": 2300,
-    "categories": 1,
-    "rating": 10,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "1",
@@ -18,9 +16,7 @@
     "sizes": [250, 500, 1000],
     "cardText": "сбалансированный",
     "cardPrice": 2000,
-    "categories": 1,
-    "rating": 8,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "2",
@@ -29,9 +25,7 @@
     "sizes": [250, 500, 1000],
     "cardText": "Под молочко",
     "cardPrice": 2300,
-    "categories": 1,
-    "rating": 7,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "3",
@@ -40,9 +34,7 @@
     "sizes": [250, 500, 1000],
     "cardText": "Смесь с робустой",
     "cardPrice": 2300,
-    "categories": 1,
-    "rating": 8,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "4",
@@ -51,9 +43,7 @@
     "sizes": [250, 500],
     "cardText": "умеренный, шоколад, орех",
     "cardPrice": 2300,
-    "categories": 1,
-    "rating": 4,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "5",
@@ -62,9 +52,7 @@
     "sizes": [250, 500],
     "cardText": "С кислинкой, ягодный",
     "cardPrice": 2800,
-    "categories": 1,
-    "rating": 5,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "6",
@@ -73,30 +61,26 @@
     "sizes": [250, 500],
     "cardText": "умеренный, шоколад, орех",
     "cardPrice": 1700,
-    "categories": 1,
-    "rating": 3,
-    "fullInfo": "Полная информация о продукте"
+    "categories": 1
   },
   {
     "id": "7",
     "cardTittle": "Порошковая",
     "cardName": "",
-    "sizes": [500],
+    "sizes": [50, 500],
     "cardText": "Для чистки от кофейных масел",
-    "cardPrice": [800, 6000],
+    "cardPrice": [6000],
     "categories": 2,
-    "rating": 3,
-    "fullInfo": "Полная информация о продукте"
+    "rating": 3
   },
   {
     "id": "8",
     "cardTittle": "Раствор",
     "cardName": "",
-    "sizes": [1000],
+    "sizes": [100, 1000],
     "cardText": "Для чистки от кальция",
     "cardPrice": 4000,
     "categories": 2,
-    "rating": 3,
-    "fullInfo": "Полная информация о продукте"
+    "rating": 3
   }
 ]
