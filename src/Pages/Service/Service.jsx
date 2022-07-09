@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
 import './Service.css';
 import { motion } from 'framer-motion';
-import {
-  Button,
-  ListGroup,
-  ListGroupItem,
-  Modal,
-  ModalHeader,
-  Row,
-} from 'react-bootstrap';
+import { Button, ListGroup, Modal } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
-import ModalForm from './Form/Form.jsx';
+import ModalForm from './Form/Form';
 
 const cardAnimation = {
   hiddenBottom: {
@@ -24,7 +17,7 @@ const cardAnimation = {
   }),
 };
 
-const Service = (props) => {
+const Service = () => {
   const [showInfo1, setShowInfo1] = useState(false);
   const [showInfo2, setShowInfo2] = useState(false);
   const [showInfo3, setShowInfo3] = useState(false);
@@ -39,11 +32,7 @@ const Service = (props) => {
         <div className="row p-0 d-flex justify-content-center">
           <p className="service_tittle">Занимаемся ремонтом любой сложности</p>
           <div className="d-flex col-lg-4 justify-content-center">
-            <a
-              onClick={handleShow}
-              type="button"
-              className="service__button"
-            >
+            <a onClick={handleShow} type="button" className="service__button">
               <span className="service__button__linetop"></span>
               <span className="service__button__lineright"></span>
               <span className="service__button__linebottom"></span>
