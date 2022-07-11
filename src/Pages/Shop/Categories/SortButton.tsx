@@ -5,7 +5,7 @@ import { setSort, Sort } from '../../../Redux/Slices/filterSlice';
 import './SortButton.css';
 
 type SortButtonProps = {
-  value: any;
+  value: { name: string; sortProperty: string };
   onClickSort: (inedx: Sort) => void;
 };
 

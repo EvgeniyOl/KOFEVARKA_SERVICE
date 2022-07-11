@@ -19,7 +19,7 @@ export const fetchShopItems = createAsyncThunk(
   },
 );
 
-type ShopItems = {
+export type ShopItems = {
   id: string;
   img: string;
   cardTittle: string;

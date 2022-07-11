@@ -44,6 +44,7 @@ export const basketSlice = createSlice({
       const findItems = state.items.find((obj) => obj.id === action.payload);
       if (findItems) {
         findItems.count--;
+        state.totalPrice = calcTotalPrice(state.items);
       }
     },
     removeItems(state, action: PayloadAction<string>) {
