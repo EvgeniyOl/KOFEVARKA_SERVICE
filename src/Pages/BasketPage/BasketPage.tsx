@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { basketSelector, clearItems } from '../../Redux/Slices/basketSlice';
 import BasketItems from './BasketItem';
 
-const BasketPage = () => {
+const BasketPage: React.FC = () => {
   const { items, totalPrice } = useSelector(basketSelector);
   const dispatch = useDispatch();
 

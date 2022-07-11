@@ -27,7 +27,7 @@ const SortButton: React.FC<SortButtonProps> = ({ value, onClickSort }) => {
   return (
     <>
       <div className="d-flex">
-        <div className="sortList">
+        <div className="sort-list">
           <Button
             className="button-sort"
             onClick={() => setVisiblePopup(!isVisiblePopup)}
@@ -37,7 +37,7 @@ const SortButton: React.FC<SortButtonProps> = ({ value, onClickSort }) => {
           </Button>{' '}
         </div>
         {isVisiblePopup && (
-          <div className="sortPopup">
+          <div className="sort-popup">
             <ul>
               {sortMenu.map((obj, index) => (
                 <li

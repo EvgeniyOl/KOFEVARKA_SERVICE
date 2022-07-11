@@ -62,20 +62,6 @@ export const shopItemsSlice = createSlice({
       state.items = [];
     });
   },
-  // extraReducers: {
-  //   [fetchShopItems.pending]: (state) => {
-  //     state.status = 'loading';
-  //     state.items = [];
-  //   },
-  //   [fetchShopItems.fulfilled]: (state, action) => {
-  //     state.items = action.payload;
-  //     state.status = 'success';
-  //   },
-  //   [fetchShopItems.rejected]: (state, action) => {
-  //     state.status = 'error';
-  //     state.items = [];
-  //   },
-  // },
 });
 export const { setItems } = shopItemsSlice.actions;
 export default shopItemsSlice.reducer;

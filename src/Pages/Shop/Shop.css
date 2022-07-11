@@ -1,10 +1,10 @@
-.shopBlock {
+.shop-block {
   background-color: #cdcdc0;
   padding-bottom: 20px;
   margin-top: 66px;
 }
 /* ---shopHeader--- */
-.shopHeader {
+.shop-header {
   background-color: #626d71;
   min-height: 80px;
   font-size: 25px;
@@ -13,19 +13,19 @@
   align-items: center;
   padding: 0;
 }
-.shopCardContainer {
+.shop-card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.shopCardContainer a {
+.shop-card-container a {
   text-decoration: none;
   color: black;
 }
-.shopCardContainer a:hover {
+.shop-card-container a:hover {
   text-decoration: none;
   color: black;
 }
-.basketStyle {
+.basket-style {
   margin: 20px;
 }

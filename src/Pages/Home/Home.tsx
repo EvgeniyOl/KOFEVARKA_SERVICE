@@ -35,9 +35,9 @@ const textAnimation = {
 const Home: React.FC = () => {
   return (
     <>
-      <div className="carouselMedia">
+      <div className="carousel-media">
         <Carousel className="carousel">
-          <Carousel.Item className="carouselItem">
+          <Carousel.Item className="carousel-item">
             <img className="d-block w-100" src={slide1} alt="First slide" />
             <Carousel.Caption className="caption">
               <p className="p">
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
               </motion.p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item className="carouselItem">
+          <Carousel.Item className="carousel-item">
             <img className="d-block w-100" src={slide2} alt="First slide" />
             <Carousel.Caption className="caption">
               <p className="p">Болшой выбор кофе от разных обжарщиков</p>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
               </motion.p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item className="carouselItem">
+          <Carousel.Item className="carousel-item">
             <img className="d-block w-100" src={slide3} alt="First slide" />
             <Carousel.Caption className="caption">
               <p className="p">Болшой выбор кофе от разных обжарщиков</p>
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
               </motion.p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item className="carouselItem">
+          <Carousel.Item className="carousel-item">
             <img className="d-block w-100" src={slide4} alt="First slide" />
             <Carousel.Caption className="caption">
               <p className="p">Болшой выбор кофе от разных обжарщиков</p>
@@ -80,13 +80,13 @@ const Home: React.FC = () => {
         </Carousel>
       </div>
 
-      <div className="aboutBlock">
+      <div className="about-block">
         <About />
       </div>
 
       <div className="block1">
         <motion.div
-          className="block1Tittle"
+          className="block1-tittle"
           initial="hiddenLeft"
           whileInView="visibleLeft"
           viewport={{ amount: 1, once: false }}
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className="block1Ul"
+          className="block1-ul"
           initial="hiddenBottom"
           whileInView="visibleBottom"
           viewport={{ amount: 0.5, once: false }}
@@ -123,19 +123,31 @@ const Home: React.FC = () => {
           initial="hiddenLeft"
           whileInView="visibleLeft"
           viewport={{ amount: 0.2, once: false }}
-          className="block1Zip"
+          className="block1-zip"
         >
-          <motion.p variants={textAnimation} custom={2} className="block1ZipP1">
+          <motion.p
+            variants={textAnimation}
+            custom={2}
+            className="block1-zip-p1"
+          >
             Используем оригинальные запчасти
           </motion.p>
-          <motion.p variants={textAnimation} custom={3} className="block1ZipP2">
+          <motion.p
+            variants={textAnimation}
+            custom={3}
+            className="block1-zip-p2"
+          >
             Полировка хрома
           </motion.p>
-          <motion.p variants={textAnimation} custom={4} className="block1ZipP3">
+          <motion.p
+            variants={textAnimation}
+            custom={4}
+            className="block1-zip-p3"
+          >
             Покраска кофемашины под ваш интерьер
           </motion.p>
         </motion.div>
-        <div className="blockButton">
+        <div className="block-button">
           <ContactsButton />
         </div>
       </div>

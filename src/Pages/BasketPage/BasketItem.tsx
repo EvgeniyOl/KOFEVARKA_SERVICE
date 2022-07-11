@@ -24,9 +24,9 @@ const BasketItems: React.FC<BasketItem> = ({
     dispatch(minusItem(id));
   };
   return (
-    <div className="basketItemCard">
+    <div className="basket-item-card">
       <hr />
-      <div className="basketItemTittle m-3">
+      <div className="basket-item-tittle m-3">
         <div>{cardTittle}</div>
         <div>{cardName}</div>
       </div>

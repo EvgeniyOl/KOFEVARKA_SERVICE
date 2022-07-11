@@ -102,20 +102,20 @@
 .product-price b {
   margin-left: 5px;
 }
-.btnAdd {
+.btn-add {
   position: absolute;
   bottom: 10px;
 }
-.itemSize {
+.item-size {
   margin: 10px;
 }
-.sizeUl {
+.size-ul {
   list-style: none;
   display: flex;
   justify-content: center;
   padding: 0;
 }
-.sizeUl li {
+.size-ul li {
   width: 120px;
   height: 30px;
   background-color: #fa782e;
@@ -125,9 +125,9 @@
   margin-left: 5px;
   cursor: pointer;
 }
-.sizeUl li.activeSize {
+.size-ul li.activeSize {
   background-color: #11e95b;
 }
-.sizeUl li.activeSize:hover {
+.size-ul li.activeSize:hover {
   box-shadow: #cc6427;
 }

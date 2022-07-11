@@ -1,10 +1,10 @@
-.containerAbout {
+.container-about {
   padding-top: 10px;
 }
 .map {
   padding-top: 10px;
 }
-.about_contacts {
+.about-contacts {
   display: flex;
   text-align: center;
   justify-content: center;

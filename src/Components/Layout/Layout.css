@@ -25,13 +25,13 @@
 /* FOOTER-------------------------- */
 
 /* Social items */
-.footerContainer {
+.footer-container {
   z-index: 3;
   bottom: 0;
   width: 100%;
   background-color: #212529;
 }
-.footerContainer a {
+.footer-container a {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -39,7 +39,7 @@
   color: grey;
   text-decoration: none;
 }
-.footerContainer a:hover {
+.footer-container a:hover {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -47,7 +47,7 @@
   color: rgb(204, 181, 2);
   text-decoration: none;
 }
-.footerContainer hr {
+.footer-container hr {
   color: gray;
   width: 60%;
   display: flex;
@@ -55,7 +55,7 @@
   justify-content: center;
   text-align: center;
 }
-.ulFooter {
+.ul-footer {
   margin: 0;
   padding: 0;
   display: flex;
@@ -68,7 +68,7 @@
   width: 30px;
   height: 30px;
 }
-.liFooterInstagram {
+.li-footer-instagram {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -78,10 +78,10 @@
   border-radius: 50%;
   border: 3px solid #212529;
 }
-.liFooterInstagram:hover {
+.li-footer-instagram:hover {
   box-shadow: 0 0 30px rgb(219, 50, 117), 0 0 60px rgb(219, 50, 117);
 }
-.liFooterWatsUp {
+.li-footer-watsup {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -91,10 +91,10 @@
   border-radius: 50%;
   border: 3px solid #212529;
 }
-.liFooterWatsUp:hover {
+.li-footer-watsup:hover {
   box-shadow: 0 0 30px rgb(17, 120, 18), 0 0 60px rgb(17, 120, 18);
 }
-.liFooterVk {
+.li-footer-vk {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -104,10 +104,10 @@
   border-radius: 50%;
   border: 3px solid #212529;
 }
-.liFooterVk:hover {
+.li-footer-vk:hover {
   box-shadow: 0 0 30px rgb(34, 63, 168), 0 0 60px rgb(34, 63, 168);
 }
-.liFooterYoutube {
+.li-footer-youtube {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -117,10 +117,10 @@
   border-radius: 50%;
   border: 3px solid #212529;
 }
-.liFooterYoutube:hover {
+.li-footer-youtube:hover {
   box-shadow: 0 0 30px rgb(219, 10, 10), 0 0 60px rgb(219, 10, 10);
 }
-.liFooterPhoneNumber {
+.li-footer-phonenumber {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -130,10 +130,10 @@
   border-radius: 50%;
   border: 3px solid #212529;
 }
-.liFooterPhoneNumber:hover {
+.li-footer-phonenumber:hover {
   box-shadow: 0 0 30px rgb(223, 175, 16), 0 0 60px rgb(223, 175, 16);
 }
-.liFooterTelega {
+.li-footer-telega {
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -143,7 +143,7 @@
   border-radius: 50%;
   border: 3px solid #212529;
 }
-.liFooterTelega:hover {
+.li-footer-telega:hover {
   box-shadow: 0 0 30px rgb(34, 63, 168), 0 0 60px rgb(34, 63, 168);
 }
 

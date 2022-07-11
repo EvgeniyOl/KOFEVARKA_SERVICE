@@ -5,9 +5,9 @@ import WatsUp from './../../Assets/img/whatsapp (1).png';
 import Telega from './../../Assets/img/telegram.png';
 import { motion } from 'framer-motion';
 
-const About = () => {
+const About: React.FC = () => {
   return (
-    <div className="containerAbout">
+    <div className="container-about">
       <div className="container-fluid">
         <div className="row d-flex p-0 m-0 justify-content-center">
           <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 pt-4 text-center justify-content-center p-0 border border-info">
@@ -15,10 +15,10 @@ const About = () => {
             <p>Омск, ул. Декабристов, 116/1, 644046</p>
             <h5>Телефон:</h5>
             <p>8 (903) 927-13-76</p>
-            <div className="showContacts about_contacts">
-              <ul className="ulshowContacts">
+            <div className="about-contacts">
+              <ul className="ul-show-contacts">
                 <motion.li
-                  className="showContactsTelega"
+                  className="show-contacts-telega"
                   whileHover={{ scale: 1.2 }}
                 >
                   <a href="https://t.me/kofevarkaservice">
@@ -27,7 +27,7 @@ const About = () => {
                 </motion.li>
 
                 <motion.li
-                  className="showContactsWatsup"
+                  className="show-contacts-watsup"
                   whileHover={{ scale: 1.2 }}
                 >
                   <a href="https://api.whatsapp.com/send?phone=79039271376">
@@ -36,7 +36,7 @@ const About = () => {
                 </motion.li>
 
                 <motion.li
-                  className="showContactsPhone"
+                  className="show-contacts-phone"
                   whileHover={{ scale: 1.2 }}
                 >
                   <a href="tel:+79039271376">

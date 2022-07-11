@@ -35,26 +35,26 @@ const ServicePage: React.FC = () => {
   };
 
   return (
-    <div className="servicePageContainer">
+    <div className="service-page-container">
       <div className="container">
         <div className="row">
           <div className="col">
             <Accordion className="accordion">
-              <Accordion.Item className="accItem" eventKey="0">
-                <Accordion.Header className="accHeader">
+              <Accordion.Item className="acc-item" eventKey="0">
+                <Accordion.Header className="acc-header">
                   <span>+</span> Основные услуги компании
                 </Accordion.Header>
                 <Accordion.Body>
-                  <div className="container accordionBody">
+                  <div className="container accordion-body">
                     <div className="row col justify-content-start p-0 m-0">
                       <div className="col-12 p-0 m-0">
                         <Accordion className="p-0" alwaysOpen>
-                          <Accordion.Item className="accItem" eventKey="0">
-                            <Accordion.Header className="accHeader">
+                          <Accordion.Item className="acc-item" eventKey="0">
+                            <Accordion.Header className="acc-header">
                               <span>+</span>Ремонт оборудования
                             </Accordion.Header>
                             <Accordion.Body>
-                              <div className="container accordionBody">
+                              <div className="container accordion-body">
                                 <div className="row col justify-content-start">
                                   <div className="col-12">
                                     <ul>
@@ -70,15 +70,15 @@ const ServicePage: React.FC = () => {
                           </Accordion.Item>
                         </Accordion>
                         <Accordion className="p-0" alwaysOpen>
-                          <Accordion.Item className="accItem" eventKey="1">
-                            <Accordion.Header className="accHeader">
+                          <Accordion.Item className="acc-item" eventKey="1">
+                            <Accordion.Header className="acc-header">
                               <span>+</span>Техническое обслуживание
                             </Accordion.Header>
                             <Accordion.Body>
-                              <div className="container accordionBody">
+                              <div className="container accordion-body">
                                 <div className="row col justify-content-start">
                                   <div className="col-12">
-                                    <ul className="accordionList">
+                                    <ul>
                                       <li>Декальцинация гидросистемы</li>
                                       <li>Разбор, чистка основных блоков</li>
                                       <li>Смазка механизмов</li>
@@ -90,12 +90,12 @@ const ServicePage: React.FC = () => {
                           </Accordion.Item>
                         </Accordion>
                         <Accordion className="p-0" alwaysOpen>
-                          <Accordion.Item className="accItem" eventKey="2">
-                            <Accordion.Header className="accHeader">
+                          <Accordion.Item className="acc-item" eventKey="2">
+                            <Accordion.Header className="acc-header">
                               <span>+</span>Восстановление внешнего вида
                             </Accordion.Header>
                             <Accordion.Body>
-                              <div className="container accordionBody">
+                              <div className="container accordion-body">
                                 <div className="row col justify-content-start">
                                   <div className="col-12">
                                     <ul>
@@ -129,7 +129,7 @@ const ServicePage: React.FC = () => {
             </p>
             <p>Подскажем лучший вариант решения проблемы</p>
             <hr />
-            <div className="serviceModal">
+            <div className="service-modal">
               <div className="row">
                 <motion.div
                   className="d-flex col-lg-4 col-sm-12 justify-content-center"
@@ -143,10 +143,10 @@ const ServicePage: React.FC = () => {
                     type="button"
                     className="service__button text-center justify-content-center"
                   >
-                    <span className="service__button__linetop"></span>
-                    <span className="service__button__lineright"></span>
-                    <span className="service__button__linebottom"></span>
-                    <span className="service__button__lineleft"></span>
+                    <span className="service-button-linetop"></span>
+                    <span className="service-button-lineright"></span>
+                    <span className="service-button-linebottom"></span>
+                    <span className="service-button-lineleft"></span>
                     Оставить заявку
                   </a>
                 </motion.div>
@@ -155,14 +155,14 @@ const ServicePage: React.FC = () => {
                   <p>8 (903) 927-13-76</p>
                 </div>
                 <motion.ul
-                  className="col-lg-4 col-sm-12 justify-content-center ulshowContacts"
+                  className="col-lg-4 col-sm-12 justify-content-center ul-show-contacts"
                   variants={serviceButtonAnimation}
                   initial="hiddenBottom"
                   animate="visibleBottom"
                   custom={3}
                 >
                   <motion.li
-                    className="showContactsTelega"
+                    className="show-contacts-telega"
                     whileHover={{ scale: 1.2 }}
                   >
                     <a href="https://t.me/kofevarkaservice">
@@ -171,7 +171,7 @@ const ServicePage: React.FC = () => {
                   </motion.li>
 
                   <motion.li
-                    className="showContactsWatsup"
+                    className="show-contacts-watsup"
                     whileHover={{ scale: 1.2 }}
                   >
                     <a href="https://api.whatsapp.com/send?phone=79039271376">
@@ -180,7 +180,7 @@ const ServicePage: React.FC = () => {
                   </motion.li>
 
                   <motion.li
-                    className="showContactsPhone"
+                    className="show-contacts-phone"
                     whileHover={{ scale: 1.2 }}
                   >
                     <a href="tel:+79039271376">

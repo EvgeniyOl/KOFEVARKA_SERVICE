@@ -43,11 +43,11 @@ const Shop: React.FC = () => {
 
   return (
     <>
-      <div className="shopBlock">
+      <div className="shop-block">
         <div className="container-fluid p-0 m-0">
           <div className="row p-0 m-0">
             <div className="col p-0 m-0">
-              <div className="shopHeader container-fluid p-0 m-0">
+              <div className="shop-header container-fluid p-0 m-0">
                 <Categories
                   value={categoryId}
                   onClickCategory={(index) => setCategoryId(index)}
@@ -57,11 +57,11 @@ const Shop: React.FC = () => {
                   onClickSort={(index) => setSortType(index)}
                 />
               </div>
-              <div className="basketStyle container-fluid">
+              <div className="basket-style container-fluid">
                 <Basket />
               </div>
 
-              <div className="container-fluid p-0 m-0 shopCardContainer">
+              <div className="container-fluid p-0 m-0 shop-card-container">
                 {status === 'loading' ? skeletons : shopItems}
               </div>
               <Pagination

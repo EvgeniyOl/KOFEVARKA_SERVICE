@@ -15,9 +15,10 @@ const ModalForm: React.FC = () => {
   } = useForm();
 
   const onSubmit = (data: any) => {
-    const token = '5394889213:AAG-H6ynudJBBiO99Pw5zZzPsBqWA12L_pE';
+    const telegramToken = process.env.REACT_APP_TOKEN;
+    // const token = '5394889213:AAG-H6ynudJBBiO99Pw5zZzPsBqWA12L_pE';
     const CHAT_ID = '-707751403';
-    const URL_API = `https://api.telegram.org/bot${token}/sendMessage`;
+    const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
     let message = `<b>Заявка с сайта!</b>\n`;
     message += JSON.stringify(data, null, '\t');

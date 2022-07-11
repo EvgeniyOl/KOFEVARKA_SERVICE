@@ -10,25 +10,25 @@ const ContactsButton = () => {
   const [showContacts, setShowContacts] = useState(false);
   return (
     <>
-      <div className="block1ZipButton">
+      <div>
         <a
           onClick={() => setShowContacts(!showContacts)}
           type="button"
           className="button"
         >
-          <span className="button_linetop"></span>
-          <span className="button_lineright"></span>
-          <span className="button_linebottom"></span>
-          <span className="button_lineleft"></span>
+          <span className="button-linetop"></span>
+          <span className="button-lineright"></span>
+          <span className="button-linebottom"></span>
+          <span className="button-lineleft"></span>
           Как с нами связаться?
         </a>
       </div>
       <CSSTransition in={showContacts} classNames="node" unmountOnExit>
         <div>
-          <div className="showContacts">
-            <ul className="ulshowContacts">
+          <div className="show-contacts">
+            <ul className="ul-show-contacts">
               <motion.li
-                className="showContactsTelega"
+                className="show-contacts-telega"
                 whileHover={{ scale: 1.2 }}
               >
                 <a href="https://t.me/kofevarkaservice">
@@ -37,7 +37,7 @@ const ContactsButton = () => {
               </motion.li>
 
               <motion.li
-                className="showContactsWatsup"
+                className="show-contacts-watsup"
                 whileHover={{ scale: 1.2 }}
               >
                 <a href="https://api.whatsapp.com/send?phone=79039271376">
@@ -46,7 +46,7 @@ const ContactsButton = () => {
               </motion.li>
 
               <motion.li
-                className="showContactsPhone"
+                className="show-contacts-phone"
                 whileHover={{ scale: 1.2 }}
               >
                 <a href="tel:+79039271376">

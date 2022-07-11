@@ -1,16 +1,16 @@
-.serviceContainer {
+.service-container {
   padding-top: 20px;
   background-color: #212529;
   color: white;
   margin: 0;
 }
-.service_tittle {
+.service-tittle {
   font-size: 28px;
   text-align: center;
   padding-top: 20px;
 }
 
-.cardPrice {
+.card-price {
   border: 2px solid white;
   border-radius: 15%;
   height: 100%;
@@ -18,37 +18,37 @@
   margin: 20px;
 }
 @media (max-width: 1400px) {
-  .cardPrice {
+  .card-price {
     min-width: calc(300px + (600px - 300px) * ((100vw - 320) / (1400 - 320)));
   }
 }
 
-.cardPrice hr {
+.card-price hr {
   margin: 5px;
   color: #10caf0;
 }
-.cardPriceTittle {
+.card-price-tittle {
   text-align: center;
   padding: 10px 5px 5px 5px;
   font-size: 15px;
   color: #03c852;
 }
-.cardPricePrice {
+.card-price-price {
   text-align: center;
   font-size: 20px;
 }
-.cardPriceBody {
+.card-price-body {
   text-align: center;
   font-size: 16px;
 }
-.cardInfo {
+.card-info {
   text-align: center;
   margin: 10px;
 }
 .showInfo {
   text-align: center;
 }
-.showInfoList {
+.show-info-list {
   padding: 10px 0px 10px 0px;
 }
 .showInfo-enter {
@@ -59,8 +59,6 @@
   opacity: 1;
   transform: translateX(0);
   transition: opacity 1500ms, transform 1500ms;
-}
-.service__btn {
 }
 
 /* ---serviceButton--- */
@@ -76,12 +74,12 @@
   overflow: hidden;
   transition: 0.2s;
 }
-.service__button:hover .service__button__linetop {
+.service__button:hover .service-button-linetop {
   left: 100%;
   transition: 0.5s;
   transition-delay: 0.25s;
 }
-.service__button__linetop {
+.service-button-linetop {
   position: absolute;
   display: block;
   top: 0;
@@ -90,12 +88,12 @@
   height: 2px;
   background: linear-gradient(90deg, transparent, #99feff);
 }
-.service__button:hover .service__button__linebottom {
+.service__button:hover .service-button-linebottom {
   right: 100%;
   transition: 0.5s;
   transition-delay: 0.25s;
 }
-.service__button__linebottom {
+.service-button-linebottom {
   position: absolute;
   display: block;
   bottom: 0;
@@ -104,12 +102,12 @@
   height: 2px;
   background: linear-gradient(270deg, transparent, #99feff);
 }
-.service__button:hover .service__button__lineleft {
+.service__button:hover .service-button-lineleft {
   bottom: 100%;
   transition: 0.5s;
   transition-delay: 0s;
 }
-.service__button__lineleft {
+.service-button-lineleft {
   position: absolute;
   display: block;
   bottom: -100%;
@@ -118,12 +116,12 @@
   height: 100%;
   background: linear-gradient(0deg, transparent, #99feff);
 }
-.service__button:hover .service__button__lineright {
+.service__button:hover .service-button-lineright {
   top: 100%;
   transition: 0.5s;
   transition-delay: 0s;
 }
-.service__button__lineright {
+.service-button-lineright {
   position: absolute;
   display: block;
   top: -100%;

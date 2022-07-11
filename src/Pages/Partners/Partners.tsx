@@ -12,8 +12,8 @@ import bork from './../../Assets/img/borkLogo.jpeg';
 
 const Partners: React.FC = () => {
   return (
-    <div className="containerPartners">
-      <div className="container tittlePartners">
+    <div className="container-partners">
+      <div className="container tittle-partners">
         <div className="row p-5">
           <div className="col">
             <h3>Наши действующие партнеры</h3>
@@ -21,7 +21,7 @@ const Partners: React.FC = () => {
         </div>
         <div className="row line1">
           <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="partnerCard">
+            <div className="partner-card">
               <motion.img
                 whileHover={{ scale: 2 }}
                 src={saecoLogo}
@@ -40,7 +40,7 @@ const Partners: React.FC = () => {
 
         <div className="row line2">
           <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="partnerCard">
+            <div className="partner-card">
               <motion.img
                 whileHover={{ scale: 2 }}
                 src={marzocco}
@@ -52,7 +52,7 @@ const Partners: React.FC = () => {
             <hr />
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="partnerCard">
+            <div className="partner-card">
               <motion.img
                 whileHover={{ scale: 2 }}
                 src={gaggia}

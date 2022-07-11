@@ -43,7 +43,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
 
   return (
     <>
-      <div className="containerCard">
+      <div className="container-card">
         <div className="card">
           <Link to={`fullCard/${id}`}>
             <div className="card-head">
@@ -59,9 +59,9 @@ const ShopCard: React.FC<ShopCardProps> = ({
               <span className="product-title">{cardName}</span>
             </div>
             <div className="product-properties">
-              <div className="cardBodyText">{cardText}</div>
-              <div className="itemSize">
-                <ul className="sizeUl">
+              <div>{cardText}</div>
+              <div className="item-size">
+                <ul className="size-ul">
                   {sizes.map((size, index) => (
                     <li
                       key={index}
@@ -77,7 +77,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
               <span className="product-price">
                 <b>{cardPrice}</b>
               </span>
-              <button onClick={onClickAdd} className="btnAdd btn btn-warning">
+              <button onClick={onClickAdd} className="btn-add btn btn-warning">
                 Добавить
               </button>
             </div>

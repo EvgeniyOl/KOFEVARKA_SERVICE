@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Service.css';
 import { motion } from 'framer-motion';
 import { Button, ListGroup, Modal } from 'react-bootstrap';
@@ -28,15 +28,15 @@ const Service = () => {
 
   return (
     <>
-      <div className="container-fluid serviceContainer">
+      <div className="container-fluid service-container">
         <div className="row p-0 d-flex justify-content-center">
-          <p className="service_tittle">Занимаемся ремонтом любой сложности</p>
+          <p className="service-tittle">Занимаемся ремонтом любой сложности</p>
           <div className="d-flex col-lg-4 justify-content-center">
             <a onClick={handleShow} type="button" className="service__button">
-              <span className="service__button__linetop"></span>
-              <span className="service__button__lineright"></span>
-              <span className="service__button__linebottom"></span>
-              <span className="service__button__lineleft"></span>
+              <span className="service-button-linetop"></span>
+              <span className="service-button-lineright"></span>
+              <span className="service-button-linebottom"></span>
+              <span className="service-button-lineleft"></span>
               Оставить заявку
             </a>
           </div>
@@ -47,32 +47,32 @@ const Service = () => {
           </Modal>
 
           <div className="col-lg-6 col-md-12 col-sm-12 p-0">
-            <div className="cardsContainer">
+            <div className="cards-container">
               <motion.div
                 initial="hiddenBottom"
                 whileInView="visibleBottom"
                 viewport={{ amount: 0.5 }}
-                className="cardsBlock"
+                className="cards-block"
               >
                 <motion.div
                   whileHover={{ scale: 1.05, boxShadow: '0 0 30px #10caf0' }}
                   variants={cardAnimation}
                   custom={1}
-                  className="cardPrice"
+                  className="card-price"
                 >
-                  <div className="cardPriceTittle">
+                  <div className="card-price-tittle">
                     Техническое Обслуживание
                   </div>
                   <hr />
-                  <div className="cardPricePrice">2000 p.</div>
+                  <div className="card-price-price">2000 p.</div>
                   <hr />
-                  <div className="cardPriceBody">
+                  <div className="card-price-body">
                     Постоянная акция:
                     <br />
                     Регулярно покупая у нас кофе - обслуживание кофемашины
                     бесплатное
                   </div>
-                  <div className="cardInfo">
+                  <div className="card-info">
                     <Button
                       onClick={() => setShowInfo1(!showInfo1)}
                       variant="outline-success"
@@ -85,7 +85,7 @@ const Service = () => {
                     classNames="showInfo"
                     unmountOnExit
                   >
-                    <ListGroup className="showInfoList text-center">
+                    <ListGroup className="show-info-list text-center">
                       <ListGroup.Item variant="success">
                         Чистка основных блоков
                       </ListGroup.Item>
@@ -103,27 +103,27 @@ const Service = () => {
           </div>
 
           <div className="col-lg-6 col-md-12 col-sm-12 p-0">
-            <div className="cardsContainer">
+            <div className="cards-container">
               <motion.div
                 initial="hiddenBottom"
                 whileInView="visibleBottom"
                 viewport={{ amount: 0.5 }}
-                className="cardsBlock"
+                className="cards-block"
               >
                 <motion.div
                   whileHover={{ scale: 1.05, boxShadow: '0 0 30px #10caf0' }}
                   variants={cardAnimation}
                   custom={1.5}
-                  className="cardPrice"
+                  className="card-price"
                 >
-                  <div className="cardPriceTittle">Не работает кофемолка</div>
+                  <div className="card-price-tittle">Не работает кофемолка</div>
                   <hr />
-                  <div className="cardPricePrice">от 1500 p.</div>
+                  <div className="card-price-price">от 1500 p.</div>
                   <hr />
-                  <div className="cardPriceBody">
+                  <div className="card-price-body">
                     Диагностика + ремонт или замена
                   </div>
-                  <div className="cardInfo">
+                  <div className="card-info">
                     <Button
                       onClick={() => setShowInfo2(!showInfo2)}
                       variant="outline-danger"
@@ -136,7 +136,7 @@ const Service = () => {
                     classNames="showInfo"
                     unmountOnExit
                   >
-                    <ListGroup className="showInfoList text-center">
+                    <ListGroup className="show-info-list text-center">
                       <ListGroup.Item variant="danger">
                         Клин кофемолки
                       </ListGroup.Item>
@@ -154,25 +154,25 @@ const Service = () => {
           </div>
 
           <div className="col-lg-6 col-md-12 col-sm-12 p-0">
-            <div className="cardsContainer">
+            <div className="cards-container">
               <motion.div
                 initial="hiddenBottom"
                 whileInView="visibleBottom"
                 viewport={{ amount: 0.5 }}
-                className="cardsBlock"
+                className="cards-block"
               >
                 <motion.div
                   whileHover={{ scale: 1.05, boxShadow: '0 0 30px #10caf0' }}
                   variants={cardAnimation}
                   custom={2}
-                  className="cardPrice"
+                  className="card-price"
                 >
-                  <div className="cardPriceTittle">Устранение течи</div>
+                  <div className="card-price-tittle">Устранение течи</div>
                   <hr />
-                  <div className="cardPricePrice">от 500 p.</div>
+                  <div className="card-price-price">от 500 p.</div>
                   <hr />
-                  <div className="cardPriceBody">Диагностика + Ремонт</div>
-                  <div className="cardInfo">
+                  <div className="card-price-body">Диагностика + Ремонт</div>
+                  <div className="card-info">
                     <Button
                       onClick={() => setShowInfo3(!showInfo3)}
                       variant="outline-danger"
@@ -185,7 +185,7 @@ const Service = () => {
                     classNames="showInfo"
                     unmountOnExit
                   >
-                    <ListGroup className="showInfoList text-center">
+                    <ListGroup className="show-info-list text-center">
                       <ListGroup.Item variant="danger">
                         Износ уплотнителей
                       </ListGroup.Item>
