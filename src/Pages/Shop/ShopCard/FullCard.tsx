@@ -34,6 +34,9 @@ const FullCard: React.FC = () => {
   }
   return (
     <div className="container full-card-container">
+      <div>
+        <img src={shopItem.img} alt="item-img" />
+      </div>
       <div>{shopItem.cardTittle}</div>
       <div>{shopItem.cardName}</div>
       <div>{shopItem.fullInfo}</div>

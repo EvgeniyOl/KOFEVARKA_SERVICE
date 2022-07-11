@@ -26,6 +26,9 @@ const BasketItems: React.FC<BasketItem> = ({
   return (
     <div className="basket-item-card">
       <hr />
+      <div className="basket-item-img">
+        <img src={img} alt="item-img" />
+      </div>
       <div className="basket-item-tittle m-3">
         <div>{cardTittle}</div>
         <div>{cardName}</div>
