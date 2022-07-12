@@ -1,7 +1,7 @@
 [
   {
     "id": "0",
-    "img": "",
+    "img": "https://ltdfoto.ru/images/2022/07/11/etna-pix.png",
     "cardTittle": "Этна",
     "cardName": "Премиум",
     "sizes": [250, 500, 1000],
@@ -49,6 +49,7 @@
   },
   {
     "id": "4",
+    "img": "https://ltdfoto.ru/images/2022/07/12/bravos-PhotoRoom.png",
     "cardTittle": "bravos",
     "cardName": "бразилия",
     "sizes": [200],
@@ -60,6 +61,7 @@
   },
   {
     "id": "5",
+    "img": "https://ltdfoto.ru/images/2022/07/12/bravos-PhotoRoom.png",
     "cardTittle": "bravos",
     "cardName": "Суматра",
     "sizes": [200],
@@ -71,6 +73,7 @@
   },
   {
     "id": "6",
+    "img": "https://ltdfoto.ru/images/2022/07/12/bravos-PhotoRoom.png",
     "cardTittle": "bravos",
     "cardName": "Куба",
     "sizes": [200],
@@ -93,6 +96,7 @@
   },
   {
     "id": "8",
+    "img": "https://ltdfoto.ru/images/2022/07/12/him-PhotoRoom.png",
     "cardTittle": "Раствор",
     "cardName": "Профклин",
     "sizes": [1000],
@@ -184,6 +188,7 @@
   },
   {
     "id": "16",
+    "img": "https://ltdfoto.ru/images/2022/07/12/LM-elit-espresso-PhotoRoom.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Elite espresso",
     "sizes": [1000],
@@ -195,6 +200,7 @@
   },
   {
     "id": "17",
+    "img": "https://ltdfoto.ru/images/2022/07/12/JM-prem-break.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Premium breakfast",
     "sizes": [1000],

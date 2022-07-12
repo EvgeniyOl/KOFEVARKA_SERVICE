@@ -31,6 +31,9 @@
   /* IE6-9 fallback on horizontal gradient */
   border-radius: 2%;
 }
+.card-head img {
+  width: 150px;
+}
 
 .card-logo {
   width: 200px;
