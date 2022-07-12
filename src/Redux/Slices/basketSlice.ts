@@ -13,7 +13,7 @@ export type BasketItem = {
   count: number;
 };
 
-interface BasketSliceState {
+export interface BasketSliceState {
   totalPrice: number;
   items: BasketItem[];
 }

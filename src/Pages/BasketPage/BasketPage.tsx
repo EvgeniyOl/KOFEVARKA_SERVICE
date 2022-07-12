@@ -20,14 +20,13 @@ const BasketPage: React.FC = () => {
   };
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
-  // const { items, totalPrice } = getBasketLS();
-  const onSubmit = ({ items, totalPrice }: any) => {
+  const onSubmit = () => {
     const telegramToken = process.env.REACT_APP_TOKEN;
     const CHAT_ID = '-707751403';
     const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
     let message = `<b>Заявка с сайта!</b>\n`;
-    message += JSON.stringify({ items, totalPrice }, null, '\t');
+    message += JSON.stringify(getBasketLS(), null, '\t');
     axios.post(URL_API, {
       chat_id: CHAT_ID,
       parse_mode: 'html',
