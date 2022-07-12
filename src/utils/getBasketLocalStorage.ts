@@ -10,3 +10,16 @@ export const getBasketLS = () => {
     totalPrice,
   };
 };
+
+export const getApplication = () => {
+  const { items, totalPrice } = getBasketLS();
+  const itemData = items.map((item: any) => {
+    return `Бренд: ${item.cardTittle}, Название: ${item.cardName}, Размер: ${item.size}, Штук: ${item.count}`;
+  });
+  const totalPriceData = `Сумма заказа ${totalPrice}`;
+
+  return {
+    itemData,
+    totalPriceData,
+  };
+};

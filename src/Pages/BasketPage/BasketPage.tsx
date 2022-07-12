@@ -8,7 +8,7 @@ import {
   clearItems,
 } from '../../Redux/Slices/basketSlice';
 import BasketItems from './BasketItem';
-import { getBasketLS } from '../../utils/getBasketLocalStorage';
+import { getApplication, getBasketLS } from '../../utils/getBasketLocalStorage';
 import axios from 'axios';
 
 const BasketPage: React.FC = () => {
@@ -26,12 +26,13 @@ const BasketPage: React.FC = () => {
     const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
     let message = `<b>Заявка с сайта!</b>\n`;
-    message += JSON.stringify(getBasketLS(), null, '\t');
+    message += JSON.stringify(getApplication(), null, '\t');
     axios.post(URL_API, {
       chat_id: CHAT_ID,
       parse_mode: 'html',
       text: message,
     });
+    console.log(getApplication());
   };
 
   return (
