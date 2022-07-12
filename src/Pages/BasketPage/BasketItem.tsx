@@ -3,6 +3,7 @@ import {
   addItems,
   BasketItem,
   minusItem,
+  removeItems,
 } from '../../Redux/Slices/basketSlice';
 import './BasketItems.css';
 
@@ -23,9 +24,11 @@ const BasketItems: React.FC<BasketItem> = ({
   const onClickMinus = () => {
     dispatch(minusItem(id));
   };
+  const onClickDeleteItem = () => {
+    dispatch(removeItems(id));
+  };
   return (
     <div className="basket-item-card">
-      <hr />
       <div className="basket-item-img">
         <img src={img} alt="item-img" />
       </div>
@@ -55,7 +58,11 @@ const BasketItems: React.FC<BasketItem> = ({
           </button>
         </div>
       </div>
-      <hr />
+      <div>
+        <button className="btn btn-danger m-3" onClick={onClickDeleteItem}>
+          x
+        </button>
+      </div>
     </div>
   );
 };

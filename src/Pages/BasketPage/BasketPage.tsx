@@ -2,8 +2,14 @@ import './BasketPage.css';
 import basket from '../../Assets/img/shopping-cart.png';
 import garbageImg from './../../Assets/img/garbage.png';
 import { useDispatch, useSelector } from 'react-redux';
-import { basketSelector, clearItems } from '../../Redux/Slices/basketSlice';
+import {
+  BasketItem,
+  basketSelector,
+  clearItems,
+} from '../../Redux/Slices/basketSlice';
 import BasketItems from './BasketItem';
+import { getBasketLS } from '../../utils/getBasketLocalStorage';
+import axios from 'axios';
 
 const BasketPage: React.FC = () => {
   const { items, totalPrice } = useSelector(basketSelector);
@@ -13,6 +19,21 @@ const BasketPage: React.FC = () => {
     dispatch(clearItems());
   };
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+
+  // const { items, totalPrice } = getBasketLS();
+  const onSubmit = ({ items, totalPrice }: any) => {
+    const telegramToken = process.env.REACT_APP_TOKEN;
+    const CHAT_ID = '-707751403';
+    const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
+
+    let message = `<b>Заявка с сайта!</b>\n`;
+    message += JSON.stringify({ items, totalPrice }, null, '\t');
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    });
+  };
 
   return (
     <div className="contaner">
@@ -40,7 +61,9 @@ const BasketPage: React.FC = () => {
           </p>
         </div>
         <div className="basket-pay">
-          <button className="btn btn-success">Оплатить</button>
+          <button onClick={onSubmit} className="btn btn-success">
+            Заказать
+          </button>
         </div>
       </div>
     </div>

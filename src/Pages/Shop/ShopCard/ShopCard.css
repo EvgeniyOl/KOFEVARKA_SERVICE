@@ -32,7 +32,7 @@
   border-radius: 2%;
 }
 .card-head img {
-  width: 150px;
+  max-height: 200px;
 }
 
 .card-logo {
