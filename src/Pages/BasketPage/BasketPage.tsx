@@ -6,6 +6,8 @@ import { basketSelector, clearItems } from '../../Redux/Slices/basketSlice';
 import BasketItems from './BasketItem';
 import axios from 'axios';
 import { getApplication } from '../../utils/getApplicationData';
+import { Button, Form } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
 
 const BasketPage: React.FC = () => {
   const { items, totalPrice } = useSelector(basketSelector);
@@ -16,19 +18,35 @@ const BasketPage: React.FC = () => {
   };
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
-  const onSubmit = () => {
+  const {
+    register, //набор св-в
+    formState: { errors },
+    handleSubmit, //обертка
+    reset, //сброс после отправки
+  } = useForm();
+
+  const onSubmit = (data: any) => {
     const telegramToken = process.env.REACT_APP_TOKEN;
     const CHAT_ID = '-707751403';
     const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
     let message = `<b>Заявка с сайта!</b>\n`;
-    message += JSON.stringify(getApplication(), null, '\t');
-    axios.post(URL_API, {
-      chat_id: CHAT_ID,
-      parse_mode: 'html',
-      text: message,
-    });
-    console.log(getApplication());
+    const { itemData, totalPriceData } = getApplication();
+    message += JSON.stringify({ itemData, totalPriceData, data }, null, '\t');
+    if (itemData.length > 0) {
+      axios.post(URL_API, {
+        chat_id: CHAT_ID,
+        parse_mode: 'html',
+        text: message,
+      });
+      console.log(message);
+      alert('Мы получили ваш заказ, ожидайте звонка');
+      reset();
+      dispatch(clearItems());
+      window.localStorage.clear();
+    } else {
+      alert('Ваша корзина пуста');
+    }
   };
 
   return (
@@ -57,9 +75,29 @@ const BasketPage: React.FC = () => {
           </p>
         </div>
         <div className="basket-pay">
-          <button onClick={onSubmit} className="btn btn-success">
-            Заказать
-          </button>
+          <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form.Group>
+              <Form.Label>Введите номер телефона</Form.Label>
+              <Form.Control
+                placeholder="+7913xxxxxxx"
+                {...register('PhoneNumber', {
+                  required: 'Поле обязательно к заполнению!',
+                  minLength: {
+                    value: 11,
+                    message: 'Минимум 11 символов!',
+                  },
+                  maxLength: {
+                    value: 12,
+                    message: 'Максимум 12 символов!',
+                  },
+                })}
+              />
+            </Form.Group>
+            <p className="errors">{errors?.PhoneNumber?.message}</p>
+            <Button type="submit" className="btn btn-success mt-3 w-100">
+              Заказать
+            </Button>{' '}
+          </Form>
         </div>
       </div>
     </div>

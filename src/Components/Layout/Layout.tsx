@@ -44,9 +44,9 @@ const Layout: React.FC = () => {
         </Container>
       </Navbar>
 
-      <body className="body">
+      <div className="body">
         <Outlet />
-      </body>
+      </div>
 
       <footer className="footer-container">
         <ul className="ul-footer">
