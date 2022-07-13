@@ -2,14 +2,10 @@ import './BasketPage.css';
 import basket from '../../Assets/img/shopping-cart.png';
 import garbageImg from './../../Assets/img/garbage.png';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  BasketItem,
-  basketSelector,
-  clearItems,
-} from '../../Redux/Slices/basketSlice';
+import { basketSelector, clearItems } from '../../Redux/Slices/basketSlice';
 import BasketItems from './BasketItem';
-import { getApplication, getBasketLS } from '../../utils/getBasketLocalStorage';
 import axios from 'axios';
+import { getApplication } from '../../utils/getApplicationData';
 
 const BasketPage: React.FC = () => {
   const { items, totalPrice } = useSelector(basketSelector);

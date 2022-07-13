@@ -1,18 +1,34 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { addItems, BasketItem } from '../../../Redux/Slices/basketSlice';
+import Basket from '../Bascet/Basket';
 import './FullCard.css';
 
 const FullCard: React.FC = () => {
   const { id } = useParams();
   const [shopItem, setShopItem] = useState<{
+    id: string;
     img: string;
+    size: number[];
     cardTittle: string;
     cardName: string;
     cardPrice: number;
     fullInfo: string;
+    count: number;
   }>();
+
+  const [countItem, setCountItem] = useState(0);
+
+  const dispatch = useDispatch();
+  const onClickAdd = () => {
+    if (shopItem) {
+      dispatch(addItems(shopItem));
+    }
+    setCountItem(countItem + 1);
+  };
 
   useEffect(() => {
     async function fetchShopItem() {
@@ -34,12 +50,24 @@ const FullCard: React.FC = () => {
   }
   return (
     <div className="container full-card-container">
-      <div>
-        <img src={shopItem.img} alt="item-img" />
+      <div className="m-3">
+        <Basket />
       </div>
-      <div>{shopItem.cardTittle}</div>
-      <div>{shopItem.cardName}</div>
-      <div>{shopItem.fullInfo}</div>
+      <div className="full-card-wrapper">
+        <div className="full-card-img">
+          <img src={shopItem.img} alt="item-img" />
+        </div>
+        <div className="full-card-info">
+          <div className="full-card-tittle">
+            {shopItem.cardTittle} -- {shopItem.cardName}
+          </div>
+          <div>{shopItem.fullInfo}</div>
+          <button className="btn btn-success mt-3" onClick={onClickAdd}>
+            Добавить в корзину <span>{countItem}</span>
+          </button>
+          <span>{shopItem.count}</span>
+        </div>
+      </div>
     </div>
   );
 };
