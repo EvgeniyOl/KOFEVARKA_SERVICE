@@ -6,48 +6,51 @@ import { basketSelector, clearItems } from '../../Redux/Slices/basketSlice';
 import BasketItems from './BasketItem';
 import axios from 'axios';
 import { getApplication } from '../../utils/getApplicationData';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import BasketModalForm from './BasketModalForm';
 
 const BasketPage: React.FC = () => {
   const { items, totalPrice } = useSelector(basketSelector);
   const dispatch = useDispatch();
-
+  const [showBasketModal, setShowBasketModal] = useState(false);
+  const handleCloseBasketModal = () => setShowBasketModal(false);
+  const handleShowBasketModal = () => setShowBasketModal(true);
   const removeBasket = () => {
     dispatch(clearItems());
   };
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
-  const {
-    register, //набор св-в
-    formState: { errors },
-    handleSubmit, //обертка
-    reset, //сброс после отправки
-  } = useForm();
+  // const {
+  //   register, //набор св-в
+  //   formState: { errors },
+  //   handleSubmit, //обертка
+  //   reset, //сброс после отправки
+  // } = useForm();
 
-  const onSubmit = (data: any) => {
-    const telegramToken = process.env.REACT_APP_TOKEN;
-    const CHAT_ID = '-707751403';
-    const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
+  // const onSubmit = (data: any) => {
+  //   const telegramToken = process.env.REACT_APP_TOKEN;
+  //   const CHAT_ID = '-707751403';
+  //   const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
-    let message = `<b>Заявка с сайта!</b>\n`;
-    const { itemData, totalPriceData } = getApplication();
-    message += JSON.stringify({ itemData, totalPriceData, data }, null, '\t');
-    if (itemData.length > 0) {
-      axios.post(URL_API, {
-        chat_id: CHAT_ID,
-        parse_mode: 'html',
-        text: message,
-      });
-      console.log(message);
-      alert('Мы получили ваш заказ, ожидайте звонка');
-      reset();
-      dispatch(clearItems());
-      window.localStorage.clear();
-    } else {
-      alert('Ваша корзина пуста');
-    }
-  };
+  //   let message = `<b>Заявка с сайта!</b>\n`;
+  //   const { itemData, totalPriceData } = getApplication();
+  //   message += JSON.stringify({ itemData, totalPriceData, data }, null, '\t');
+  //   if (itemData.length > 0) {
+  //     axios.post(URL_API, {
+  //       chat_id: CHAT_ID,
+  //       parse_mode: 'html',
+  //       text: message,
+  //     });
+  //     alert('Мы получили ваш заказ, ожидайте звонка');
+  //     reset();
+  //     dispatch(clearItems());
+  //     window.localStorage.clear();
+  //   } else {
+  //     alert('В корзине ничего нет!');
+  //   }
+  // };
 
   return (
     <div className="contaner">
@@ -74,31 +77,14 @@ const BasketPage: React.FC = () => {
             Сумма заказа: <span className="basket-price">{totalPrice}р.</span>{' '}
           </p>
         </div>
-        <div className="basket-pay">
-          <Form onSubmit={handleSubmit(onSubmit)}>
-            <Form.Group>
-              <Form.Label>Введите номер телефона</Form.Label>
-              <Form.Control
-                placeholder="+7913xxxxxxx"
-                {...register('PhoneNumber', {
-                  required: 'Поле обязательно к заполнению!',
-                  minLength: {
-                    value: 11,
-                    message: 'Минимум 11 символов!',
-                  },
-                  maxLength: {
-                    value: 12,
-                    message: 'Максимум 12 символов!',
-                  },
-                })}
-              />
-            </Form.Group>
-            <p className="errors">{errors?.PhoneNumber?.message}</p>
-            <Button type="submit" className="btn btn-success mt-3 w-100">
-              Заказать
-            </Button>{' '}
-          </Form>
+        <div className="basket-button">
+          <Button className="btn btn-success" onClick={handleShowBasketModal}>
+            Заказать
+          </Button>{' '}
         </div>
+        <Modal show={showBasketModal} onHide={handleCloseBasketModal}>
+          <BasketModalForm />
+        </Modal>
       </div>
     </div>
   );

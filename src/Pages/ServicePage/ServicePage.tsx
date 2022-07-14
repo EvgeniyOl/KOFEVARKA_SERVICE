@@ -9,7 +9,6 @@ import Telega from './../../Assets/img/telegram.png';
 
 const ServicePage: React.FC = () => {
   const [showServiceModal, setshowServiceModal] = useState(false);
-
   const handleCloseServiceModal = () => setshowServiceModal(false);
   const handleShowServiceModal = () => setshowServiceModal(true);
 
