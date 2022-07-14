@@ -25,7 +25,7 @@ const Layout: React.FC = () => {
               width={40}
               className="logo d-inline-block align-top"
             />
-            Cofevarka Service
+            Kofevarka Service
           </NavbarBrand>
           <NavbarToggle aria-controls="responsive-navbar-nav" />
           <NavbarCollapse id="responsive-navbar-nav">

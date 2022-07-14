@@ -47,3 +47,15 @@
   align-items: center;
   margin: 20px;
 }
+.basket-kot-img {
+  display: flex;
+  justify-content: center;
+}
+.basket-kot-img img {
+  width: 300px;
+}
+.basket-kot-tittle {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+}
