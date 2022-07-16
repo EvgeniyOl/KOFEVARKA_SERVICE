@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import {
   addItems,
@@ -26,42 +27,58 @@ const BasketItems: React.FC<BasketItem> = ({
   };
   const onClickDeleteItem = () => {
     dispatch(removeItems(id));
+    window.localStorage.clear();
   };
   return (
     <div className="basket-item-card">
-      <div className="basket-item-img">
+      <div className="basket-item-img my-3">
         <img src={img} alt="item-img" />
       </div>
       <div className="basket-item-tittle m-3">
         <div>{cardTittle}</div>
         <div>{cardName}</div>
       </div>
-      <div className="m-3">{size} грамм</div>
       <div className="m-3">
-        <div>Цена</div>
-        <div>{cardPrice * count} р.</div>
+        <div className="text-center">Вес</div>
+        <hr />
+        <div>{size}</div>
+      </div>
+      <div className="m-3">
+        <div className="text-center">Цена</div>
+        <hr />
+        <div>{cardPrice * count}</div>
       </div>
 
       <div className="m-3">
-        <div>Количество</div>
+        <div className="text-center mx-2">Количество</div>
         <div>
-          <button
+          <Button
+            variant="outline-danger"
             disabled={count === 1}
             onClick={onClickMinus}
-            className="btn btn-danger"
+            className="mx-2"
           >
             -
-          </button>{' '}
+          </Button>{' '}
           {count}{' '}
-          <button onClick={onClickPlus} className="btn btn-success">
+          <Button
+            variant="outline-success"
+            onClick={onClickPlus}
+            className="mx-2"
+          >
             +
-          </button>
+          </Button>{' '}
         </div>
       </div>
       <div>
-        <button className="btn btn-danger m-3" onClick={onClickDeleteItem}>
+        <div className="text-center mx-2">Убрать</div>
+        <Button
+          variant="outline-danger"
+          className="mx-3"
+          onClick={onClickDeleteItem}
+        >
           x
-        </button>
+        </Button>
       </div>
     </div>
   );

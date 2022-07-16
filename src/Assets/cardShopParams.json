@@ -1,9 +1,9 @@
 [
   {
     "id": "0",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/YQQvt20/platinum-ps.png",
     "cardTittle": "Этна",
-    "cardName": "Премиум",
+    "cardName": "Платинум",
     "sizes": [250, 500, 1000],
     "cardText": "Самый вкусный",
     "cardPrice": 2000,
@@ -13,7 +13,7 @@
   },
   {
     "id": "1",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/SBLkBhV/classic-ps.png",
     "cardTittle": "Этна",
     "cardName": "классика",
     "sizes": [250, 500, 1000],
@@ -25,7 +25,7 @@
   },
   {
     "id": "2",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/t4PQvFq/lite-ps.png",
     "cardTittle": "Этна",
     "cardName": "мягкий",
     "sizes": [500, 1000],
@@ -37,7 +37,7 @@
   },
   {
     "id": "3",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/WtG1NdK/hard-ps.png",
     "cardTittle": "Этна",
     "cardName": "крепкий",
     "sizes": [500, 1000],
@@ -49,7 +49,7 @@
   },
   {
     "id": "4",
-    "img": "https://ltdfoto.ru/images/2022/07/12/bravos-PhotoRoom.png",
+    "img": "https://i.ibb.co/Q9YwyTM/bravos-ps.png",
     "cardTittle": "bravos",
     "cardName": "бразилия",
     "sizes": [200],
@@ -61,7 +61,7 @@
   },
   {
     "id": "5",
-    "img": "https://ltdfoto.ru/images/2022/07/12/bravos-PhotoRoom.png",
+    "img": "https://i.ibb.co/Q9YwyTM/bravos-ps.png",
     "cardTittle": "bravos",
     "cardName": "Суматра",
     "sizes": [200],
@@ -73,7 +73,7 @@
   },
   {
     "id": "6",
-    "img": "https://ltdfoto.ru/images/2022/07/12/bravos-PhotoRoom.png",
+    "img": "https://i.ibb.co/Q9YwyTM/bravos-ps.png",
     "cardTittle": "bravos",
     "cardName": "Куба",
     "sizes": [200],
@@ -85,7 +85,7 @@
   },
   {
     "id": "7",
-    "img": "https://ltdfoto.ru/images/2022/07/12/poroshok-PhotoRoom.png",
+    "img": "https://i.ibb.co/ss88RQH/clean-poroshok-ps.png",
     "cardTittle": "Порошковая",
     "cardName": "Чистое море",
     "sizes": [1000],
@@ -97,7 +97,7 @@
   },
   {
     "id": "8",
-    "img": "https://ltdfoto.ru/images/2022/07/12/him-PhotoRoom.png",
+    "img": "https://i.ibb.co/LNBNBxj/profklin-rastvor-ps.png",
     "cardTittle": "Раствор",
     "cardName": "Профклин",
     "sizes": [1000],
@@ -109,7 +109,7 @@
   },
   {
     "id": "9",
-    "img": "https://ltdfoto.ru/images/2022/07/12/shpritz-PhotoRoom.png",
+    "img": "https://i.ibb.co/b1Vj86w/shpritz-ps.png",
     "cardTittle": "Смазка",
     "cardName": "",
     "sizes": [15],
@@ -121,7 +121,7 @@
   },
   {
     "id": "10",
-    "img": "https://ltdfoto.ru/images/2022/07/12/him-PhotoRoom.png",
+    "img": "https://i.ibb.co/Lng4xLg/rastvor-kofevarka-ps.png",
     "cardTittle": "Раствор",
     "cardName": "Kofevarka",
     "sizes": [1000],
@@ -133,7 +133,7 @@
   },
   {
     "id": "11",
-    "img": "https://ltdfoto.ru/images/2022/07/12/tabletki-PhotoRoom.png",
+    "img": "https://i.ibb.co/BwXgMpT/tabletki-ps.png",
     "cardTittle": "Таблетки",
     "cardName": "Sanvita clean",
     "sizes": [10],
@@ -145,7 +145,7 @@
   },
   {
     "id": "12",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/CV59PPt/silver-ps.png",
     "cardTittle": "Этна",
     "cardName": "Silver",
     "sizes": [250, 500, 1000],
@@ -157,7 +157,7 @@
   },
   {
     "id": "13",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/YQQvt20/platinum-ps.png",
     "cardTittle": "Этна",
     "cardName": "Platinum",
     "sizes": [250, 500, 1000],
@@ -169,7 +169,7 @@
   },
   {
     "id": "14",
-    "img": "https://ltdfoto.ru/images/2022/07/12/etna-pix.png",
+    "img": "https://i.ibb.co/s5knFkS/verona-ps.png",
     "cardTittle": "Этна",
     "cardName": "Verona",
     "sizes": [250, 500, 1000],
@@ -181,6 +181,7 @@
   },
   {
     "id": "15",
+    "img": "https://i.ibb.co/PQL66g6/jm-poesia-ps.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Poesia",
     "sizes": [1000],
@@ -192,7 +193,7 @@
   },
   {
     "id": "16",
-    "img": "https://ltdfoto.ru/images/2022/07/12/LM-elit-espresso-PhotoRoom.png",
+    "img": "https://i.ibb.co/HtwZNRy/jm-es-elit-ps.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Elite espresso",
     "sizes": [1000],
@@ -204,7 +205,7 @@
   },
   {
     "id": "17",
-    "img": "https://ltdfoto.ru/images/2022/07/12/JM-prem-break-PhotoRoom.png",
+    "img": "https://i.ibb.co/54vhcNM/jm-prem-break-ps.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Premium breakfast",
     "sizes": [1000],
@@ -216,7 +217,7 @@
   },
   {
     "id": "18",
-    "img": "https://ltdfoto.ru/images/2022/07/12/JM-espr-gold.png",
+    "img": "https://i.ibb.co/JBs5Dsh/jm-es-gold-ps.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Espresso Gold",
     "sizes": [1000],
@@ -228,6 +229,7 @@
   },
   {
     "id": "19",
+    "img": "https://i.ibb.co/YLR1rnq/ristretto-ps.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Ristretto",
     "sizes": [10],
@@ -239,7 +241,7 @@
   },
   {
     "id": "20",
-    "img": "https://ltdfoto.ru/images/2022/07/12/espresso-kaps-PhotoRoom.png",
+    "img": "https://i.ibb.co/Fb2gDN9/espresso-kaps-ps.png",
     "cardTittle": "Julius Meinl",
     "cardName": "Espresso",
     "sizes": [10],
@@ -248,5 +250,17 @@
     "categories": 1,
     "rating": 8,
     "fullInfo": "Сбалансированный бленд, вобравший в себя неповторимый вкус арабики с вулканических почв Никарагуа и Гондураса, а также бархатистость азиатской робусты. Интенсивность: 8 Кислотность: 6 Сладость: 8"
+  },
+  {
+    "id": "21",
+    "img": "https://i.ibb.co/qN6t34F/poroshok-kofevarka-ps.png",
+    "cardTittle": "Порошковая",
+    "cardName": "Kofevarka",
+    "sizes": [1000],
+    "cardText": "Для чистки от накипи и кофейных масел",
+    "cardPrice": 1200,
+    "categories": 2,
+    "rating": 3,
+    "fullInfo": "Полная информация о продукте"
   }
 ]

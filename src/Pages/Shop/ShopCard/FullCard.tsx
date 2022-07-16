@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { addItems, BasketItem } from '../../../Redux/Slices/basketSlice';
+import { addItems } from '../../../Redux/Slices/basketSlice';
 import Basket from '../Bascet/Basket';
 import './FullCard.css';
 

@@ -1,11 +1,16 @@
+.back {
+  background-color: #766967;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 .basket-container {
-  background-color: #cdcdc0;
+  background-color: #d5d6d1;
   border-radius: 30px;
   color: black;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  border: 2px solid yellow;
   padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+  border: 2px solid #353c3f;
   height: 100%;
   margin-left: 10%;
   margin-right: 10%;
@@ -13,20 +18,20 @@
 .basket-header {
   display: flex;
   justify-content: space-around;
-  color: #626d70;
+  color: #ff8d3f;
 }
 .basket-body {
   min-height: 300px;
   /* flex-direction: column; */
 }
 .basket-footer {
-  color: #626d70;
+  color: #353c3f;
   display: flex;
   justify-content: space-around;
   font-size: 20px;
 }
 .basket-price {
-  color: rgb(218, 72, 4);
+  color: #ff8d3f;
 }
 .basket-pay {
   display: flex;

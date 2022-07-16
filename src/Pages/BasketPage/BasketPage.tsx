@@ -19,13 +19,14 @@ const BasketPage: React.FC = () => {
 
   const removeBasket = () => {
     dispatch(clearItems());
+    window.localStorage.clear();
   };
 
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
   if (items.length < 1) {
     return (
-      <div className="contaner">
+      <div className="back">
         <div className="basket-container">
           <div className="basket-header">
             <div className="basket-img">
@@ -46,7 +47,8 @@ const BasketPage: React.FC = () => {
           <div className="basket-footer">
             <p>Всего: {totalCount}</p>
             <p>
-              Сумма заказа: <span className="basket-price">{totalPrice}р.</span>{' '}
+              Сумма заказа:{' '}
+              <span className="basket-price">{totalPrice} рублей</span>{' '}
             </p>
           </div>
           <div className="basket-button"></div>
@@ -55,32 +57,31 @@ const BasketPage: React.FC = () => {
     );
   }
   return (
-    <div className="contaner">
+    <div className="back">
       <div className="basket-container">
         <div className="basket-header">
           <div className="basket-img">
             <img src={basket} alt="basket-img" />
             <h2>Корзина</h2>
           </div>
-          <button onClick={removeBasket} className="btn btn-danger">
+          <Button variant="outline-danger" onClick={removeBasket}>
             <img src={garbageImg} width={'30px'} /> Очистить корзину
-          </button>
+          </Button>{' '}
         </div>
-        <hr />
-        <div className="basket-body">
+        <div className="basket-body m-3">
           {items.map((item) => (
             <BasketItems key={item.id} {...item} />
           ))}
         </div>
-        <hr />
         <div className="basket-footer">
           <p>Всего: {totalCount}</p>
           <p>
-            Сумма заказа: <span className="basket-price">{totalPrice}р.</span>{' '}
+            Сумма заказа:{' '}
+            <span className="basket-price">{totalPrice} рублей</span>{' '}
           </p>
         </div>
         <div className="basket-button">
-          <Button className="btn btn-success" onClick={handleShowBasketModal}>
+          <Button variant="outline-primary" onClick={handleShowBasketModal}>
             Заказать
           </Button>{' '}
         </div>

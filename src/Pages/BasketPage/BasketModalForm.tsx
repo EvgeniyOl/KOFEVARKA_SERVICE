@@ -79,6 +79,20 @@ const BasketModalForm: React.FC = () => {
             />
           </Form.Group>
           <p className="errors">{errors?.PhoneNumber?.message}</p>
+          <Form.Group>
+            <Form.Label>Адрес доставки</Form.Label>
+            <Form.Control
+              placeholder="Ленина 10"
+              {...register('Адрес', {
+                required: 'Поле обязательно к заполнению!',
+                minLength: {
+                  value: 2,
+                  message: 'Минимум 2 символа!',
+                },
+              })}
+            />
+          </Form.Group>
+          <p className="errors">{errors?.Адрес?.message}</p>
           {showSuccessAlert && (
             <Alert
               className="mt-3"

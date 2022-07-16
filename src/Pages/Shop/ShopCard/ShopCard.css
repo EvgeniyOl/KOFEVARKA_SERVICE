@@ -32,7 +32,9 @@
   border-radius: 2%;
 }
 .card-head img {
+  align-items: center;
   max-height: 200px;
+  max-width: 100px;
 }
 
 .card-logo {
