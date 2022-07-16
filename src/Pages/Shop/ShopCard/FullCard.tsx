@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { addItems } from '../../../Redux/Slices/basketSlice';
@@ -49,7 +50,7 @@ const FullCard: React.FC = () => {
     return <div className="full-card-container">Загрузка...</div>;
   }
   return (
-    <div className="container full-card-container">
+    <div className="full-card-container">
       <div className="m-3">
         <Basket />
       </div>
@@ -62,9 +63,14 @@ const FullCard: React.FC = () => {
             {shopItem.cardTittle} -- {shopItem.cardName}
           </div>
           <div>{shopItem.fullInfo}</div>
-          <button className="btn btn-success mt-3" onClick={onClickAdd}>
+          <Button
+            variant="outline-success"
+            size="lg"
+            className="mt-3"
+            onClick={onClickAdd}
+          >
             Добавить в корзину <span>{countItem}</span>
-          </button>
+          </Button>{' '}
           <span>{shopItem.count}</span>
         </div>
       </div>

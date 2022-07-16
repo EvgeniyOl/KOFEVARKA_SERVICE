@@ -81,7 +81,11 @@ const BasketPage: React.FC = () => {
           </p>
         </div>
         <div className="basket-button">
-          <Button variant="outline-primary" onClick={handleShowBasketModal}>
+          <Button
+            variant="outline-primary"
+            size="lg"
+            onClick={handleShowBasketModal}
+          >
             Заказать
           </Button>{' '}
         </div>
