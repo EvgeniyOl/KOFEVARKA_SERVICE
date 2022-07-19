@@ -1,16 +1,13 @@
 import axios from 'axios';
-import { useState } from 'react';
-import { Alert, Button, Form, Modal } from 'react-bootstrap';
+import Swal from 'sweetalert2';
+import { Button, Form, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { clearItems } from '../../Redux/Slices/basketSlice';
 import { getApplication } from '../../utils/getApplicationData';
-import SuccessModal from './SuccessModal';
 
 const BasketModalForm: React.FC = () => {
   const dispatch = useDispatch();
-  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
-  const handleCloseBasketModal = () => setShowSuccessAlert(false);
 
   const {
     register, //набор св-в
@@ -33,16 +30,13 @@ const BasketModalForm: React.FC = () => {
         parse_mode: 'html',
         text: message,
       })
-      .then(() => {
-        setShowSuccessAlert(!showSuccessAlert);
-      })
       .catch((err) => {
         console.log(err);
       });
     reset();
+    Swal.fire('Готово', 'Ваш заказ отправлен, ожидайте звонка!', 'success');
     dispatch(clearItems());
     window.localStorage.clear();
-    // setShowSuccessAlert(!showSuccessAlert);
   };
 
   return (
@@ -97,24 +91,11 @@ const BasketModalForm: React.FC = () => {
             />
           </Form.Group>
           <p className="errors">{errors?.Адрес?.message}</p>
-          {/* {showSuccessAlert && (
-            <Alert
-              className="mt-3"
-              id="successForm"
-              key={'success'}
-              variant={'success'}
-            >
-              Ваша заявка принята, ожидайте звонка.
-            </Alert>
-          )} */}
           <Button type="submit" variant="outline-success" className="mt-4">
             Отправить заявку
           </Button>{' '}
         </Form>
       </Modal.Body>
-      <Modal show={showSuccessAlert} onHide={handleCloseBasketModal}>
-        <SuccessModal />
-      </Modal>
     </>
   );
 };

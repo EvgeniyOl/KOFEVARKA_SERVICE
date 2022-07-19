@@ -60,9 +60,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
             </div>
             <div className="product-properties">
               <div>{cardText}</div>
-              <div className="item-size">
-                <ul className="size-ul">{size}</ul>
-              </div>
+              <div className="item-size">{size} г</div>
 
               <span className="product-price">
                 <b>{cardPrice}</b>

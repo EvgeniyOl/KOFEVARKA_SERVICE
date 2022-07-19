@@ -111,29 +111,15 @@
 }
 .item-size {
   margin: 10px;
-}
-.size-ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-.size-ul li {
   width: 120px;
   height: 30px;
   background-color: #fa782e;
-  border: 1px solid gray;
+  border: 3px solid gray;
   border-radius: 20px;
   text-align: center;
   margin-left: 5px;
-  cursor: pointer;
 }
-.size-ul li.activeSize {
-  background-color: #11e95b;
-}
-.size-ul li.activeSize:hover {
-  box-shadow: #ff8d3f;
-}
+
 .product-count {
   color: #c82930;
 }
