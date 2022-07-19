@@ -4,7 +4,6 @@ import { Carousel } from 'react-bootstrap';
 import slide1 from './../../Assets/img/slide1.webp';
 import slide2 from './../../Assets/img/roster.webp';
 import slide3 from './../../Assets/img/slide2.webp';
-import slide4 from './../../Assets/img/slide2.webp';
 import ContactsButton from '../ContactsButton/ContactsButton';
 import { motion } from 'framer-motion';
 import About from '../About/About';
@@ -53,27 +52,18 @@ const Home: React.FC = () => {
           <Carousel.Item className="carousel-item">
             <img className="d-block w-100" src={slide2} alt="First slide" />
             <Carousel.Caption className="caption">
-              <p className="p">Болшой выбор кофе от разных обжарщиков</p>
+              <p className="p">Большой выбор кофе от разных обжарщиков</p>
               <motion.p whileHover={{ scale: 1.5 }}>
-                <a href="#">Узнать подробности</a>
+                <a href="/Shop">Заказать кофе</a>
               </motion.p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <img className="d-block w-100" src={slide3} alt="First slide" />
             <Carousel.Caption className="caption">
-              <p className="p">Болшой выбор кофе от разных обжарщиков</p>
+              <p className="p">Можем сами забрать вашу машинку в сервис</p>
               <motion.p whileHover={{ scale: 1.5 }}>
-                <a href="#">Узнать подробности</a>
-              </motion.p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item">
-            <img className="d-block w-100" src={slide4} alt="First slide" />
-            <Carousel.Caption className="caption">
-              <p className="p">Болшой выбор кофе от разных обжарщиков</p>
-              <motion.p whileHover={{ scale: 1.5 }}>
-                <a href="#">Узнать подробности</a>
+                <a href="/Service">Оставить заявку</a>
               </motion.p>
             </Carousel.Caption>
           </Carousel.Item>

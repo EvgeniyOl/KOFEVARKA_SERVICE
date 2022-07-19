@@ -24,6 +24,7 @@
 }
 .full-card-img img {
   height: 100%;
+  padding: 10px;
 }
 .full-card-info {
   margin: 20px;

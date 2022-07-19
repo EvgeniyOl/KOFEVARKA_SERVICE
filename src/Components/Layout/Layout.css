@@ -11,11 +11,8 @@
   text-decoration: none;
   padding-left: 20px;
   padding-right: 20px;
-  color: #66696c;
+  color: #acb1b6;
 }
-/* .active {
-  color: rgb(31, 112, 233);
-} */
 .link:hover {
   text-shadow: 0 0 10px rgb(31, 112, 233);
 }
