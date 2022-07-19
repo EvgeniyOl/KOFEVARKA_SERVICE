@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import BasketPage from '../../Pages/BasketPage/BasketPage';
 import Home from '../../Pages/Home/Home';
+import NavBar from '../../Pages/NavBar/NavBar';
 import ServicePage from '../../Pages/ServicePage/ServicePage';
 import Shop from '../../Pages/Shop/Shop';
 import FullCard from '../../Pages/Shop/ShopCard/FullCard';

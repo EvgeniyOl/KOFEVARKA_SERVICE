@@ -40,7 +40,8 @@ const BasketPage: React.FC = () => {
               <img src={kot} alt="kot" />
             </div>
             <span className="basket-kot-tittle">
-              Тут ничего нет! Нужно что-то выбрать!!
+              Тут ничего нет!
+              <br /> Нужно что-то выбрать!!
             </span>
           </div>
           <hr />
@@ -64,7 +65,11 @@ const BasketPage: React.FC = () => {
             <img src={basket} alt="basket-img" />
             <h2>Корзина</h2>
           </div>
-          <Button variant="outline-danger" onClick={removeBasket}>
+          <Button
+            className="basket-header-button"
+            variant="outline-danger"
+            onClick={removeBasket}
+          >
             <img src={garbageImg} width={'30px'} /> Очистить корзину
           </Button>{' '}
         </div>

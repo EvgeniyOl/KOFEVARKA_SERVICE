@@ -1,9 +1,5 @@
-import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import './Layout.css';
-import logo from './../../Assets/img/logo.jpeg';
 import instagram from './../../Assets/img/instagram.png';
 import WatsUp from './../../Assets/img/whatsapp (1).png';
 import Vk from './../../Assets/img/vk.png';
@@ -11,39 +7,14 @@ import PhoneNumber from './../../Assets/img/telephone-call.png';
 import Youtube from './../../Assets/img/youtube.png';
 import Telega from './../../Assets/img/telegram.png';
 import { motion } from 'framer-motion';
+import NavBar from '../../Pages/NavBar/NavBar';
 
 const Layout: React.FC = () => {
   return (
     <>
-      <Navbar fixed="top" collapseOnSelect expand="md" bg="dark" variant="dark">
-        <Container>
-          <NavbarBrand href="/">
-            <img
-              src={logo}
-              alt="logo"
-              height={40}
-              width={40}
-              className="logo d-inline-block align-top"
-            />
-            Kofevarka Service
-          </NavbarBrand>
-          <NavbarToggle aria-controls="responsive-navbar-nav" />
-          <NavbarCollapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Link className="link" to="/">
-                Главная
-              </Link>
-              <Link className="link" to="/Service">
-                Сервис
-              </Link>
-              <Link className="link" to="/Shop">
-                Магазин
-              </Link>
-            </Nav>
-          </NavbarCollapse>
-        </Container>
-      </Navbar>
-
+      <div>
+        <NavBar />
+      </div>
       <div className="body">
         <Outlet />
       </div>

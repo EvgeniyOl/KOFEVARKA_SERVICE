@@ -1,16 +1,15 @@
 .service-page-container {
-  padding-top: 66px;
   background: #0d0f10;
   background: -webkit-linear-gradient(top left, #0d0f10, #878886);
   background: -moz-linear-gradient(top left, #0d0f10, #878886);
   background: linear-gradient(to bottom right, #0d0f10, #878886);
-  min-height: 850px;
+  min-height: 800px;
   color: #90afc5;
 }
 
 /* --- Accordion--- */
 .accordion {
-  padding-top: 80px;
+  padding-top: 40px;
   position: relative;
 }
 

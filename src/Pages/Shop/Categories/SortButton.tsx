@@ -26,7 +26,7 @@ const SortButton: React.FC<SortButtonProps> = ({ value, onClickSort }) => {
   };
   return (
     <>
-      <div className="d-flex">
+      <div className="d-flex-column p-2">
         <div className="sort-list">
           <Button
             className="button-sort"

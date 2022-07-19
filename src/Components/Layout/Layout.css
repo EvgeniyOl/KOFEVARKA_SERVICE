@@ -1,24 +1,3 @@
-/* HEADER-------------------------- */
-/* Logotip */
-.logo {
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgb(31, 112, 233);
-  margin-right: 10px;
-}
-/* Links */
-.link {
-  font-size: 20px;
-  text-decoration: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #acb1b6;
-}
-.link:hover {
-  text-shadow: 0 0 10px rgb(31, 112, 233);
-}
-.collapse.show {
-  color: green;
-}
 /* FOOTER-------------------------- */
 
 /* Social items */

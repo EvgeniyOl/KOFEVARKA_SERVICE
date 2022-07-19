@@ -42,26 +42,31 @@ const BasketItems: React.FC<BasketItem> = ({
   };
   return (
     <div className="basket-item-card">
-      <div className="basket-item-img my-3">
-        <img src={img} alt="item-img" />
-      </div>
-      <div className="basket-item-tittle m-3">
-        <div>{cardTittle}</div>
-        <div>{cardName}</div>
-      </div>
-      <div className="m-3">
-        <div className="text-center">Вес</div>
-        <hr />
-        <div>{size}</div>
-      </div>
-      <div className="m-3">
-        <div className="text-center">Цена</div>
-        <hr />
-        <div>{cardPrice * count}</div>
+      <div className="basket-item-img-tittle">
+        <div className="basket-item-img my-3">
+          <img src={img} alt="item-img" />
+        </div>
+        <div className="basket-item-tittle m-3">
+          <div>{cardTittle}</div>
+          <div>{cardName}</div>
+        </div>
       </div>
 
-      <div className="m-3">
-        <div className="text-center mx-2">Количество</div>
+      <div className="basket-item-weight-price">
+        <div className="m-3">
+          <div className="text-center">Вес</div>
+          <hr />
+          <div>{size}</div>
+        </div>
+        <div className="m-3">
+          <div className="text-center">Цена</div>
+          <hr />
+          <div>{cardPrice * count}</div>
+        </div>
+      </div>
+
+      <div className="m-3 plus-minus">
+        <div className="text-center mb-2">Количество</div>
         <div>
           <Button
             variant="outline-danger"
@@ -82,14 +87,16 @@ const BasketItems: React.FC<BasketItem> = ({
         </div>
       </div>
       <div>
-        <div className="text-center mx-2">Убрать</div>
-        <Button
-          variant="outline-danger"
-          className="mx-3"
-          onClick={onClickDeleteItem}
-        >
-          x
-        </Button>
+        <div className="delete-button">
+          <div className="text-center mx-2">Убрать</div>
+          <Button
+            variant="outline-danger"
+            className="mx-3 my-3"
+            onClick={onClickDeleteItem}
+          >
+            x
+          </Button>
+        </div>
       </div>
     </div>
   );
