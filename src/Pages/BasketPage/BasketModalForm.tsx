@@ -5,10 +5,12 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { clearItems } from '../../Redux/Slices/basketSlice';
 import { getApplication } from '../../utils/getApplicationData';
+import SuccessModal from './SuccessModal';
 
 const BasketModalForm: React.FC = () => {
   const dispatch = useDispatch();
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const handleCloseBasketModal = () => setShowSuccessAlert(false);
 
   const {
     register, //набор св-в
@@ -40,6 +42,7 @@ const BasketModalForm: React.FC = () => {
     reset();
     dispatch(clearItems());
     window.localStorage.clear();
+    // setShowSuccessAlert(!showSuccessAlert);
   };
 
   return (
@@ -94,7 +97,7 @@ const BasketModalForm: React.FC = () => {
             />
           </Form.Group>
           <p className="errors">{errors?.Адрес?.message}</p>
-          {showSuccessAlert && (
+          {/* {showSuccessAlert && (
             <Alert
               className="mt-3"
               id="successForm"
@@ -103,12 +106,15 @@ const BasketModalForm: React.FC = () => {
             >
               Ваша заявка принята, ожидайте звонка.
             </Alert>
-          )}
+          )} */}
           <Button type="submit" variant="outline-success" className="mt-4">
             Отправить заявку
           </Button>{' '}
         </Form>
       </Modal.Body>
+      <Modal show={showSuccessAlert} onHide={handleCloseBasketModal}>
+        <SuccessModal />
+      </Modal>
     </>
   );
 };
