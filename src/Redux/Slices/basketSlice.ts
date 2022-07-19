@@ -8,7 +8,7 @@ export type BasketItem = {
   img: string;
   cardTittle: string;
   cardName: string;
-  size: number[];
+  size: number;
   cardPrice: number;
   count: number;
 };
@@ -31,7 +31,7 @@ export const basketSlice = createSlice({
     addItems(state, action: PayloadAction<BasketItem>) {
       const findItems = state.items.find((obj) => obj.id === action.payload.id); // найти объект
       if (findItems) {
-        findItems.count++; //если объект уже есть в корзине, увеличить счетчик на 1
+        findItems.count += 1; //если объект уже есть в корзине, увеличить счетчик на 1
       } else {
         state.items.push({
           ...action.payload, // если объекта еще нет в корзине добавить его и установить счетчик 1
@@ -54,6 +54,7 @@ export const basketSlice = createSlice({
     clearItems(state) {
       state.items = [];
       state.totalPrice = 0;
+      window.localStorage.clear();
     },
   },
 });

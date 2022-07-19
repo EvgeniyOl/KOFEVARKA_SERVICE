@@ -24,7 +24,7 @@ export type ShopItems = {
   img: string;
   cardTittle: string;
   cardName: string;
-  sizes: number[];
+  size: number;
   cardText: string;
   cardPrice: number;
   count: number;

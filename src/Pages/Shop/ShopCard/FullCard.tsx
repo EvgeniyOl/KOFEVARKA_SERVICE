@@ -2,9 +2,9 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { addItems } from '../../../Redux/Slices/basketSlice';
+import { addItems, basketSelector } from '../../../Redux/Slices/basketSlice';
 import Basket from '../Bascet/Basket';
 import './FullCard.css';
 
@@ -13,14 +13,13 @@ const FullCard: React.FC = () => {
   const [shopItem, setShopItem] = useState<{
     id: string;
     img: string;
-    size: number[];
+    size: number;
     cardTittle: string;
     cardName: string;
     cardPrice: number;
     fullInfo: string;
     count: number;
   }>();
-
   const [countItem, setCountItem] = useState(0);
 
   const dispatch = useDispatch();
@@ -60,18 +59,17 @@ const FullCard: React.FC = () => {
         </div>
         <div className="full-card-info">
           <div className="full-card-tittle">
-            {shopItem.cardTittle} -- {shopItem.cardName}
+            {shopItem.cardTittle} -- {shopItem.cardName} -- {shopItem.size}
           </div>
           <div>{shopItem.fullInfo}</div>
           <Button
-            variant="outline-success"
+            variant="outline-primary"
             size="lg"
             className="mt-3"
             onClick={onClickAdd}
           >
             Добавить в корзину <span>{countItem}</span>
           </Button>{' '}
-          <span>{shopItem.count}</span>
         </div>
       </div>
     </div>

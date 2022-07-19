@@ -9,7 +9,7 @@ type ShopCardProps = {
   img: string;
   cardTittle: string;
   cardName: string;
-  sizes: [];
+  size: number;
   cardText: string;
   cardPrice: number;
   count: number;
@@ -19,7 +19,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
   img,
   cardTittle,
   cardName,
-  sizes,
+  size,
   cardText,
   cardPrice,
   count,
@@ -34,7 +34,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
       img,
       cardTittle,
       cardName,
-      size: sizes[activeSize],
+      size,
       cardPrice,
       count: 0,
     };
@@ -61,17 +61,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
             <div className="product-properties">
               <div>{cardText}</div>
               <div className="item-size">
-                <ul className="size-ul">
-                  {sizes.map((size, index) => (
-                    <li
-                      key={index}
-                      onClick={() => setActiveSize(index)}
-                      className={activeSize === index ? 'activeSize' : ''}
-                    >
-                      {size} г.
-                    </li>
-                  ))}
-                </ul>
+                <ul className="size-ul">{size}</ul>
               </div>
 
               <span className="product-price">

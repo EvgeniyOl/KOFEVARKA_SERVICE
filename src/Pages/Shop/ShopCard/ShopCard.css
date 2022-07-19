@@ -134,3 +134,6 @@
 .size-ul li.activeSize:hover {
   box-shadow: #ff8d3f;
 }
+.product-count {
+  color: #c82930;
+}

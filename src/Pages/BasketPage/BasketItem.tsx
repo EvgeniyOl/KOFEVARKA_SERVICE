@@ -1,8 +1,10 @@
+import { useEffect, useRef } from 'react';
 import { Button } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   addItems,
   BasketItem,
+  basketSelector,
   minusItem,
   removeItems,
 } from '../../Redux/Slices/basketSlice';
@@ -18,6 +20,16 @@ const BasketItems: React.FC<BasketItem> = ({
   count,
 }) => {
   const dispatch = useDispatch();
+  const { items } = useSelector(basketSelector);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(items);
+      localStorage.setItem('basketItems', json); // сохраняем корзину в хранилище
+    }
+    isMounted.current = true;
+  }, [items]);
 
   const onClickPlus = () => {
     dispatch(addItems({ id } as BasketItem));
@@ -27,7 +39,6 @@ const BasketItems: React.FC<BasketItem> = ({
   };
   const onClickDeleteItem = () => {
     dispatch(removeItems(id));
-    window.localStorage.clear();
   };
   return (
     <div className="basket-item-card">
@@ -60,7 +71,7 @@ const BasketItems: React.FC<BasketItem> = ({
           >
             -
           </Button>{' '}
-          {count}{' '}
+          {count}
           <Button
             variant="outline-success"
             onClick={onClickPlus}
