@@ -47,7 +47,7 @@ const ModalForm: React.FC = () => {
               placeholder="Дмитрий"
               {...register('Имя', {
                 required: 'Поле обязательно к заполнению!',
-                // type: 'text',
+
                 minLength: {
                   value: 2,
                   message: 'Минимум 2 символа!',
@@ -62,7 +62,7 @@ const ModalForm: React.FC = () => {
               placeholder="+7913xxxxxxx"
               {...register('PhoneNumber', {
                 required: 'Поле обязательно к заполнению!',
-                // type: 'numbers',
+
                 minLength: {
                   value: 11,
                   message: 'Минимум 11 символов!',
@@ -80,7 +80,6 @@ const ModalForm: React.FC = () => {
             <Form.Control
               placeholder="Завелись тараканы, хочу почистить"
               as="textarea"
-              // name="text"
               rows={3}
               {...register('Проблема', {
                 required: 'Поле обязательно к заполнению!',
@@ -98,7 +97,6 @@ const ModalForm: React.FC = () => {
               placeholder="самовар-3000"
               {...register('Кофемашина', {
                 required: true,
-                // type: 'text',
               })}
             />
           </Form.Group>
