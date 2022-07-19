@@ -101,14 +101,11 @@ const ModalForm: React.FC = () => {
             />
           </Form.Group>
           <Form.Group className="import-km">
-            <Form.Check
-              className="switch"
-              type="switch"
-              id="custom-switch"
-              label="Заберите мою кофемашину"
+            <Form.Label>Заберите мою кофемашину по адресу</Form.Label>
+            <Form.Control
+              placeholder="Ленина 10 / 1 подъезд / 1 этаж / кв.1 "
+              {...register('Адрес')}
             />
-            <Form.Label>Адрес</Form.Label>
-            <Form.Control placeholder="Ленина 10" {...register('Адрес')} />
           </Form.Group>
           {showAlert && (
             <Alert
