@@ -26,12 +26,13 @@ const SortButton: React.FC<SortButtonProps> = ({ value, onClickSort }) => {
   };
   return (
     <>
-      <div className="d-flex-column p-2">
+      <div className="d-flex-column">
         <div className="sort-list">
           <Button
+            size="sm"
             className="button-sort"
             onClick={() => setVisiblePopup(!isVisiblePopup)}
-            variant="warning"
+            variant="info"
           >
             Отсортировать
           </Button>{' '}

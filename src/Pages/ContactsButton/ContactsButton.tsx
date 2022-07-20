@@ -6,7 +6,7 @@ import { CSSTransition } from 'react-transition-group';
 import './ContactsButton.css';
 import { motion } from 'framer-motion';
 
-const ContactsButton = () => {
+const ContactsButton: React.FC = () => {
   const [showContacts, setShowContacts] = useState(false);
   return (
     <>
@@ -23,7 +23,12 @@ const ContactsButton = () => {
           Как с нами связаться?
         </a>
       </div>
-      <CSSTransition in={showContacts} classNames="node" unmountOnExit>
+      <CSSTransition
+        in={showContacts}
+        timeout={200}
+        classNames="node"
+        unmountOnExit
+      >
         <div>
           <div className="show-contacts">
             <ul className="ul-show-contacts">

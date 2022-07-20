@@ -1,12 +1,11 @@
-import { useState } from 'react';
-import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import { Link } from 'react-router-dom';
 import logo from './../../Assets/img/logo.jpeg';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <>
       <Navbar

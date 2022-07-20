@@ -2,9 +2,9 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { addItems, basketSelector } from '../../../Redux/Slices/basketSlice';
+import { addItems } from '../../../Redux/Slices/basketSlice';
 import Basket from '../Bascet/Basket';
 import './FullCard.css';
 

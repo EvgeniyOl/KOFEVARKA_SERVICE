@@ -10,14 +10,14 @@ const cardAnimation = {
     y: 100,
     opacity: 0,
   },
-  visibleBottom: (custom) => ({
+  visibleBottom: (custom: number) => ({
     y: 0,
     opacity: 1,
     transition: { delay: custom * 0.5 },
   }),
 };
 
-const Service = () => {
+const Service: React.FC = () => {
   const [showInfo1, setShowInfo1] = useState(false);
   const [showInfo2, setShowInfo2] = useState(false);
   const [showInfo3, setShowInfo3] = useState(false);
@@ -81,6 +81,7 @@ const Service = () => {
                     </Button>{' '}
                   </div>
                   <CSSTransition
+                    timeout={200}
                     in={showInfo1}
                     classNames="showInfo"
                     unmountOnExit
@@ -132,6 +133,7 @@ const Service = () => {
                     </Button>{' '}
                   </div>
                   <CSSTransition
+                    timeout={200}
                     in={showInfo2}
                     classNames="showInfo"
                     unmountOnExit
@@ -181,6 +183,7 @@ const Service = () => {
                     </Button>{' '}
                   </div>
                   <CSSTransition
+                    timeout={200}
                     in={showInfo3}
                     classNames="showInfo"
                     unmountOnExit
