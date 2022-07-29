@@ -1,21 +1,37 @@
+import { Button } from 'react-bootstrap';
 import './Pagination.css';
-import ReactPaginate from 'react-paginate';
 
 type PagianationProps = {
+  itemsCount: number;
   onChangePage: (event: number) => void;
+  itemsperPage: number;
 };
-const Pagination: React.FC<PagianationProps> = ({ onChangePage }) => {
+const Pagination: React.FC<PagianationProps> = ({
+  itemsCount,
+  onChangePage,
+  itemsperPage,
+}) => {
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(itemsCount / itemsperPage); i++) {
+    pageNumbers.push(i);
+  }
+  const onClickPage = (numbers: number) => {
+    onChangePage(numbers);
+  };
+
   return (
     <>
-      <ReactPaginate
-        className="paginate-root"
-        breakLabel="..."
-        nextLabel=">"
-        previousLabel="<"
-        onPageChange={(event) => onChangePage(event.selected + 1)}
-        pageRangeDisplayed={5}
-        pageCount={5}
-      />
+      <ul className="page-list">
+        {pageNumbers.map((numbers) => (
+          <a
+            key={numbers}
+            className="page-links"
+            onClick={() => onClickPage(numbers)}
+          >
+            <li>{numbers}</li>
+          </a>
+        ))}
+      </ul>
     </>
   );
 };

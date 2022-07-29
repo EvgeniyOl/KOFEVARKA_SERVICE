@@ -23,6 +23,10 @@ const Shop: React.FC = () => {
     sortProperty: '',
   });
   const [currentPage, setCurrentPage] = useState(1);
+  const [itemsperPage] = useState(8);
+  const lastItemsIndex = currentPage * itemsperPage;
+  const firstItemsIndex = lastItemsIndex - itemsperPage;
+  const currentItem = items.slice(firstItemsIndex, lastItemsIndex);
 
   const category = categoryId > 0 ? `categories=${categoryId}` : '';
 
@@ -39,7 +43,9 @@ const Shop: React.FC = () => {
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
   ));
-  const shopItems = items.map((obj: any) => <ShopCard key={obj.id} {...obj} />);
+  const shopItems = currentItem.map((obj: any) => (
+    <ShopCard key={obj.id} {...obj} />
+  ));
 
   return (
     <>
@@ -65,6 +71,8 @@ const Shop: React.FC = () => {
                 {status === 'loading' ? skeletons : shopItems}
               </div>
               <Pagination
+                itemsCount={items.length}
+                itemsperPage={itemsperPage}
                 onChangePage={(number: number) => setCurrentPage(number)}
               />
             </div>

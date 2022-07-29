@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Button, ListGroup, Modal } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 import ModalForm from './Form/Form';
+import axios from 'axios';
 
 const cardAnimation = {
   hiddenBottom: {
@@ -64,7 +65,7 @@ const Service: React.FC = () => {
                     Техническое Обслуживание
                   </div>
                   <hr />
-                  <div className="card-price-price">2000 p.</div>
+                  <div className="card-price-price">2700 p.</div>
                   <hr />
                   <div className="card-price-body">
                     Постоянная акция:

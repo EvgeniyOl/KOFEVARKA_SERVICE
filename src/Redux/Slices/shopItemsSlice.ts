@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { RootState } from '../store';
 import { Sort } from './filterSlice';
 
 type FetchShopItemsArgs = {
@@ -13,7 +14,7 @@ export const fetchShopItems = createAsyncThunk(
   async (params: FetchShopItemsArgs) => {
     const { category, currentPage, sortType } = params;
     const res = await axios.get<ShopItems[]>(
-      `https://62a167b3cc8c0118ef4ade8d.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortType.sortProperty}&order=desc`,
+      `https://62a167b3cc8c0118ef4ade8d.mockapi.io/items?page=${currentPage}&${category}&sortBy=${sortType.sortProperty}&order=desc`,
     );
     return res.data;
   },
@@ -63,5 +64,6 @@ export const shopItemsSlice = createSlice({
     });
   },
 });
+export const shopItemsSelector = (state: RootState) => state.shopItemsReducer;
 export const { setItems } = shopItemsSlice.actions;
 export default shopItemsSlice.reducer;
