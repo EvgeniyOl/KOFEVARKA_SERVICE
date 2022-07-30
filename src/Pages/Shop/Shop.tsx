@@ -27,6 +27,7 @@ const Shop: React.FC = () => {
   const lastItemsIndex = currentPage * itemsperPage;
   const firstItemsIndex = lastItemsIndex - itemsperPage;
   const currentItem = items.slice(firstItemsIndex, lastItemsIndex);
+  console.log(currentItem);
 
   const category = categoryId > 0 ? `categories=${categoryId}` : '';
 

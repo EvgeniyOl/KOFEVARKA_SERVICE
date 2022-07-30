@@ -26,8 +26,6 @@ const ShopCard: React.FC<ShopCardProps> = ({
 }) => {
   const dispatch = useDispatch();
 
-  const [activeSize, setActiveSize] = useState(0);
-
   const onClickAdd = () => {
     const item: BasketItem = {
       id,

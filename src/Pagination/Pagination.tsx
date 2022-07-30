@@ -1,4 +1,3 @@
-import { Button } from 'react-bootstrap';
 import './Pagination.css';
 
 type PagianationProps = {

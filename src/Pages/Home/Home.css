@@ -1,39 +1,6 @@
-/* ---Carousel--- */
-@media (max-width: 1400px) {
-  .carousel-item p {
-    font-size: calc(12px + (32 - 12) * ((100vw - 320px) / (1400 - 320)));
-  }
+.carouselka-container {
+  min-height: 800px;
 }
-.p {
-  color: #ffffff;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.p a {
-  font-size: 25px;
-}
-.caption {
-  position: relative;
-  top: 20%;
-}
-.caption a {
-  text-decoration: none;
-  color: #d39207;
-}
-.caption a:hover {
-  color: #d39207;
-  text-shadow: 0 0 10px #d39207, 0 0 30px #ae4616, 0 0 60px #ff0000;
-}
-.carousel-item {
-  max-height: 800px;
-}
-.carousel-item img {
-  opacity: 0.4;
-}
-.carousel-media {
-  background-color: rgb(121, 151, 168);
-}
-
 /* ---block1--- */
 .block1 {
   max-width: 1600px;
