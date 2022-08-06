@@ -58,6 +58,7 @@ const Shop: React.FC = () => {
                 <Categories
                   value={categoryId}
                   onClickCategory={(index) => setCategoryId(index)}
+                  onChangePage={(number: number) => setCurrentPage(number)}
                 />
                 <SortButton
                   value={sortType}

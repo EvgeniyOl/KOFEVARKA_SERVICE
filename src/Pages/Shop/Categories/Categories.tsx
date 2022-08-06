@@ -15,12 +15,18 @@ const categories = [
 type CategoriesProps = {
   value: number;
   onClickCategory: (index: number) => void;
+  onChangePage: (number: number) => void;
 };
-const Categories: React.FC<CategoriesProps> = ({ value, onClickCategory }) => {
+const Categories: React.FC<CategoriesProps> = ({
+  value,
+  onClickCategory,
+  onChangePage,
+}) => {
   const dispatch = useDispatch();
 
   const onSelectItem = (index: number) => {
     onClickCategory(index);
+    onChangePage(1);
     dispatch(setCategoriesType(index));
   };
 
