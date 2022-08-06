@@ -3,7 +3,7 @@
   background: -webkit-linear-gradient(top left, #0d0f10, #878886);
   background: -moz-linear-gradient(top left, #0d0f10, #878886);
   background: linear-gradient(to bottom right, #0d0f10, #878886);
-  min-height: 800px;
+  min-height: 100vh;
   color: #90afc5;
 }
 

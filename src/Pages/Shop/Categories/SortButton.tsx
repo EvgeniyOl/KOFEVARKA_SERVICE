@@ -7,9 +7,14 @@ import './SortButton.css';
 type SortButtonProps = {
   value: { name: string; sortProperty: string };
   onClickSort: (inedx: Sort) => void;
+  onChangePage: (number: number) => void;
 };
 
-const SortButton: React.FC<SortButtonProps> = ({ value, onClickSort }) => {
+const SortButton: React.FC<SortButtonProps> = ({
+  value,
+  onClickSort,
+  onChangePage,
+}) => {
   const dispatch = useDispatch();
 
   const [isVisiblePopup, setVisiblePopup] = useState(false);
@@ -22,6 +27,7 @@ const SortButton: React.FC<SortButtonProps> = ({ value, onClickSort }) => {
   const onClickSortMenuItem = (index: Sort) => {
     onClickSort(index);
     dispatch(setSort(index));
+    onChangePage(1);
     setVisiblePopup(false);
   };
   return (

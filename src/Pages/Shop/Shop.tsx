@@ -63,6 +63,7 @@ const Shop: React.FC = () => {
                 <SortButton
                   value={sortType}
                   onClickSort={(index) => setSortType(index)}
+                  onChangePage={(number: number) => setCurrentPage(number)}
                 />
               </div>
               <div className="basket-style container-fluid">

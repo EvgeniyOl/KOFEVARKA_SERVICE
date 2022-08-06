@@ -27,7 +27,7 @@ const Pagination: React.FC<PagianationProps> = ({
             className="page-links"
             onClick={() => onClickPage(numbers)}
           >
-            <li>{numbers}</li>
+            <li>{numbers}</li>   
           </a>
         ))}
       </ul>
