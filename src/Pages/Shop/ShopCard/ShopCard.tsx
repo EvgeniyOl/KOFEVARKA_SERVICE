@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ShopCard.css';
 import { useDispatch } from 'react-redux';
 import { addItems, BasketItem } from '../../../Redux/Slices/basketSlice';

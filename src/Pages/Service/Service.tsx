@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Button, ListGroup, Modal } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 import ModalForm from './Form/Form';
-import axios from 'axios';
 
 const cardAnimation = {
   hiddenBottom: {
