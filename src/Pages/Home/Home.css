@@ -1,6 +1,11 @@
 .carouselka-container {
   min-height: 800px;
 }
+@media (max-width: 500px) {
+  .carouselka-container {
+    min-height: 220px;
+  }
+}
 /* ---block1--- */
 .block1 {
   max-width: 1600px;

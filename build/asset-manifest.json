@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.197540ad.css",
-    "main.js": "/static/js/main.5323f79d.js",
+    "main.css": "/static/css/main.958767f5.css",
+    "main.js": "/static/js/main.ecc9b437.js",
     "static/media/slide2.webp": "/static/media/slide2.d1f9ece735af045c8f82.webp",
     "static/media/slide1.webp": "/static/media/slide1.62f1d263b65000c9eedc.webp",
     "static/media/home-background.webp": "/static/media/home-background.8faa44167d86f9fdbb68.webp",
@@ -22,11 +22,11 @@
     "static/media/borkLogo.jpeg": "/static/media/borkLogo.a459a63eaafc8dbbad68.jpeg",
     "static/media/whatsapp (1).png": "/static/media/whatsapp (1).23ba589a2c4926bd12c8.png",
     "index.html": "/index.html",
-    "main.197540ad.css.map": "/static/css/main.197540ad.css.map",
-    "main.5323f79d.js.map": "/static/js/main.5323f79d.js.map"
+    "main.958767f5.css.map": "/static/css/main.958767f5.css.map",
+    "main.ecc9b437.js.map": "/static/js/main.ecc9b437.js.map"
   },
   "entrypoints": [
-    "static/css/main.197540ad.css",
-    "static/js/main.5323f79d.js"
+    "static/css/main.958767f5.css",
+    "static/js/main.ecc9b437.js"
   ]
 }
