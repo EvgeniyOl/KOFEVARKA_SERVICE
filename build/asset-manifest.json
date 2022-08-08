@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.197540ad.css",
+    "main.js": "/static/js/main.5323f79d.js",
+    "static/media/slide2.webp": "/static/media/slide2.d1f9ece735af045c8f82.webp",
+    "static/media/slide1.webp": "/static/media/slide1.62f1d263b65000c9eedc.webp",
+    "static/media/home-background.webp": "/static/media/home-background.8faa44167d86f9fdbb68.webp",
+    "static/media/fon2.webp": "/static/media/fon2.525a6ead2ac4a3f18434.webp",
+    "static/media/kot-PhotoRoom.png": "/static/media/kot-PhotoRoom.2a23ededf29e41aee6c9.png",
+    "static/media/roster.webp": "/static/media/roster.0387308966df6ac7578b.webp",
+    "static/media/telephone-call.png": "/static/media/telephone-call.ee034a176dc60e4b43bc.png",
+    "static/media/jiraLogo.webp": "/static/media/jiraLogo.986ffe28b772b8cd361b.webp",
+    "static/media/gaggiaLogo.jpeg": "/static/media/gaggiaLogo.d423b24a5a613774e439.jpeg",
+    "static/media/instagram.png": "/static/media/instagram.2d5cedd576ca1a740d7c.png",
+    "static/media/marzoccoLogo.jpeg": "/static/media/marzoccoLogo.d9e7e74fe7de8302b8f9.jpeg",
+    "static/media/logo.jpeg": "/static/media/logo.32346bfe83cec57244a9.jpeg",
+    "static/media/price-tag.png": "/static/media/price-tag.8c178aa95aeb0b4b1898.png",
+    "static/media/check-mark.png": "/static/media/check-mark.0ad340259a8c140a65cd.png",
+    "static/media/telegram.png": "/static/media/telegram.b76beae5b2e76931bec1.png",
+    "static/media/vk.png": "/static/media/vk.aef20084ee579ee27adf.png",
+    "static/media/shopping-cart.png": "/static/media/shopping-cart.96c73cb49987ccdf1154.png",
+    "static/media/borkLogo.jpeg": "/static/media/borkLogo.a459a63eaafc8dbbad68.jpeg",
+    "static/media/whatsapp (1).png": "/static/media/whatsapp (1).23ba589a2c4926bd12c8.png",
+    "index.html": "/index.html",
+    "main.197540ad.css.map": "/static/css/main.197540ad.css.map",
+    "main.5323f79d.js.map": "/static/js/main.5323f79d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.197540ad.css",
+    "static/js/main.5323f79d.js"
+  ]
+}

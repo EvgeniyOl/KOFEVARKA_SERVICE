@@ -17,7 +17,8 @@ const BasketModalForm: React.FC = () => {
   } = useForm();
 
   const onSubmit = (data: any) => {
-    const telegramToken = process.env.REACT_APP_TOKEN;
+    // const telegramToken = process.env.REACT_APP_TOKEN;
+    const telegramToken = '5394889213:AAG-H6ynudJBBiO99Pw5zZzPsBqWA12L_pE';
     const CHAT_ID = '-707751403';
     const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
