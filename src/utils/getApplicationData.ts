@@ -1,4 +1,4 @@
-import { BasketItem } from './../redux/slices/basketSlice';
+import { BasketItem } from '../redux/slices/basketSlice';
 import { getBasketLS } from './getBasketLocalStorage';
 
 export const getApplication = () => {
