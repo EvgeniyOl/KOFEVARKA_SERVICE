@@ -4,6 +4,14 @@ import { Alert, Button, Form, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './ServiceForm.css';
 
+type FormValues = {
+  Имя: string;
+  Номер_телефона: string;
+  Проблема: string;
+  Кофемашина: string;
+  Адрес: string;
+};
+
 const ServiceForm: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false); // Success Alert in Form
 
@@ -12,7 +20,7 @@ const ServiceForm: React.FC = () => {
     formState: { errors },
     handleSubmit, //обертка
     reset, //сброс после отправки
-  } = useForm();
+  } = useForm<FormValues>();
 
   const onSubmit = (data: any) => {
     // const telegramToken = process.env.REACT_APP_TOKEN;
@@ -61,7 +69,7 @@ const ServiceForm: React.FC = () => {
             <Form.Label>Номер телефона</Form.Label>
             <Form.Control
               placeholder="+7913xxxxxxx"
-              {...register('PhoneNumber', {
+              {...register('Номер_телефона', {
                 required: 'Поле обязательно к заполнению!',
 
                 minLength: {
@@ -75,7 +83,7 @@ const ServiceForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.PhoneNumber?.message}</p>
+          <p className="errors">{errors?.Номер_телефона?.message}</p>
           <Form.Group className="mt-3">
             <Form.Label>Опишите проблему</Form.Label>
             <Form.Control

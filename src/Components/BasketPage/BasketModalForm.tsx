@@ -6,6 +6,12 @@ import { useDispatch } from 'react-redux';
 import { clearItems } from '../../redux/slices/basketSlice';
 import { getApplication } from '../../utils/getApplicationData';
 
+type FormValues = {
+  Имя: string;
+  Номер_телефона: string;
+  Адрес: string;
+};
+
 const BasketModalForm: React.FC = () => {
   const dispatch = useDispatch();
 
@@ -14,7 +20,7 @@ const BasketModalForm: React.FC = () => {
     formState: { errors },
     handleSubmit, //обертка
     reset, //сброс после отправки
-  } = useForm();
+  } = useForm<FormValues>();
 
   const onSubmit = (data: any) => {
     // const telegramToken = process.env.REACT_APP_TOKEN;
