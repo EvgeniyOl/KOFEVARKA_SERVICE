@@ -70,7 +70,8 @@ const BasketPage: React.FC = () => {
             variant="outline-danger"
             onClick={removeBasket}
           >
-            <img src={garbageImg} width={'30px'} /> Очистить корзину
+            <img src={garbageImg} width={'30px'} alt="garbageImg" /> Очистить
+            корзину
           </Button>{' '}
         </div>
         <div className="basket-body m-3">

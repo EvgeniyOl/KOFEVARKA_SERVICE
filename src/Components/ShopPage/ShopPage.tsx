@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './ShopPage.css';
 import Categories from '../Categories/Categories';
-import Basket from './BasketButton';
+import BasketButton from './BasketButton';
 import ShopCard, { ShopCardProps } from './ShopCard';
 import Skeleton from './Skeleton';
 import SortButton from '../SortButton/SortButton';
@@ -66,7 +66,7 @@ const ShopPage: React.FC = () => {
                 />
               </div>
               <div className="basket-style container-fluid">
-                <Basket />
+                <BasketButton />
               </div>
 
               <div className="container-fluid p-0 m-0 shop-card-container">

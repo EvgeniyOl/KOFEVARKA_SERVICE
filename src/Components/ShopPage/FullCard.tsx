@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { addItems } from '../../redux/slices/basketSlice';
-import Basket from './BasketButton';
+import BasketButton from './BasketButton';
 import './FullCard.css';
 
 const FullCard: React.FC = () => {
@@ -51,7 +51,7 @@ const FullCard: React.FC = () => {
   return (
     <div className="full-card-container">
       <div className="m-3">
-        <Basket />
+        <BasketButton />
       </div>
       <div className="full-card-wrapper">
         <div className="full-card-img">
