@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import BasketPage from '../../Pages/BasketPage/BasketPage';
-import Home from '../../Pages/Home/Home';
-import ServicePage from '../../Pages/ServicePage/ServicePage';
-import Shop from '../../Pages/Shop/Shop';
-import FullCard from '../../Pages/Shop/ShopCard/FullCard';
+import BasketPage from '../BasketPage/BasketPage';
+import Home from '../Home/Home';
+import ServicePage from '../ServicePage/ServicePage';
+import Shop from '../ShopPage/ShopPage';
+import FullCard from '../ShopPage/FullCard';
 import Layout from '../Layout/Layout';
 
 const RoutePage: React.FC = () => {

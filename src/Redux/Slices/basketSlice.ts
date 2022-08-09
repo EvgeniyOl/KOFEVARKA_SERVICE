@@ -1,4 +1,4 @@
-import { RootState } from './../store';
+import { RootState } from '../store';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { getBasketLS } from '../../utils/getBasketLocalStorage';
 import { calcTotalPrice } from '../../utils/calcTotalPrice';

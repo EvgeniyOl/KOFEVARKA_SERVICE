@@ -1,4 +1,4 @@
-import RoutePage from './Components/RoutePage/RoutePage';
+import RoutePage from './components/RoutePage/RoutePage';
 
 const App: React.FC = () => {
   return (

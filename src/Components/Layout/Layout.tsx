@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom';
 import './Layout.css';
-import instagram from './../../Assets/img/instagram.png';
-import WatsUp from './../../Assets/img/whatsapp (1).png';
-import Vk from './../../Assets/img/vk.png';
-import PhoneNumber from './../../Assets/img/telephone-call.png';
-import Youtube from './../../Assets/img/youtube.png';
-import Telega from './../../Assets/img/telegram.png';
+import instagram from './../../assets/img/instagram.png';
+import WatsUp from './../../assets/img/whatsapp (1).png';
+import Vk from './../../assets/img/vk.png';
+import PhoneNumber from './../../assets/img/telephone-call.png';
+import Youtube from './../../assets/img/youtube.png';
+import Telega from './../../assets/img/telegram.png';
 import { motion } from 'framer-motion';
-import NavBar from '../../Pages/NavBar/NavBar';
+import NavBar from '../NavBar/NavBar';
 
 const Layout: React.FC = () => {
   return (

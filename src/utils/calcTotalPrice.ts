@@ -1,4 +1,4 @@
-import { BasketItem } from '../Redux/Slices/basketSlice';
+import { BasketItem } from '../redux/slices/basketSlice';
 
 export const calcTotalPrice = (items: BasketItem[]) => {
   return items.reduce((sum, obj) => {
