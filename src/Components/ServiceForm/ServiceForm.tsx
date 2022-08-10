@@ -13,7 +13,7 @@ type FormValues = {
 };
 
 const ServiceForm: React.FC = () => {
-  const [showAlert, setShowAlert] = useState(false); // Success Alert in Form
+  const [showAlert, setShowAlert] = useState(false);
 
   const {
     register, //набор св-в
@@ -23,10 +23,9 @@ const ServiceForm: React.FC = () => {
   } = useForm<FormValues>();
 
   const onSubmit = (data: any) => {
-    // const telegramToken = process.env.REACT_APP_TOKEN;
-    const telegramToken = '5394889213:AAG-H6ynudJBBiO99Pw5zZzPsBqWA12L_pE';
-    const CHAT_ID = '-707751403';
-    const URL_API = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
+    const TG_TOKEN = process.env.REACT_APP_TOKEN;
+    const CHAT_ID = process.env.REACT_APP_CHAT;
+    const URL_API = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
 
     let message = `<b>Заявка с сайта!</b>\n`;
     message += JSON.stringify(data, null, '\t');

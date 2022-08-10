@@ -28,7 +28,7 @@ export const basketSlice = createSlice({
   name: 'basket',
   initialState,
   reducers: {
-    addItems(state, action: PayloadAction<BasketItem>) {
+    addItems(state: BasketSliceState, action: PayloadAction<BasketItem>) {
       const findItems = state.items.find((obj) => obj.id === action.payload.id); // найти объект
       if (findItems) {
         findItems.count += 1; //если объект уже есть в корзине, увеличить счетчик на 1
@@ -40,18 +40,18 @@ export const basketSlice = createSlice({
       }
       state.totalPrice = calcTotalPrice(state.items);
     },
-    minusItem(state, action: PayloadAction<string>) {
+    minusItem(state: BasketSliceState, action: PayloadAction<string>) {
       const findItems = state.items.find((obj) => obj.id === action.payload);
       if (findItems) {
         findItems.count--;
         state.totalPrice = calcTotalPrice(state.items);
       }
     },
-    removeItems(state, action: PayloadAction<string>) {
+    removeItems(state: BasketSliceState, action: PayloadAction<string>) {
       state.items = state.items.filter((obj) => obj.id !== action.payload);
       state.totalPrice = calcTotalPrice(state.items);
     },
-    clearItems(state) {
+    clearItems(state: BasketSliceState) {
       state.items = [];
       state.totalPrice = 0;
       window.localStorage.clear();

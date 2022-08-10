@@ -64,7 +64,7 @@ const HomeServiceBlock: React.FC = () => {
                     Техническое Обслуживание
                   </div>
                   <hr />
-                  <div className="card-price-price">2700 p.</div>
+                  <div className="card-price-price">от 2700 p.</div>
                   <hr />
                   <div className="card-price-body">
                     Постоянная акция:

@@ -22,10 +22,13 @@ export const filterSlice = createSlice({
   name: 'filter',
   initialState,
   reducers: {
-    setCategoriesType(state, action: PayloadAction<number>) {
+    setCategoriesType(
+      state: { categoriesType: number },
+      action: PayloadAction<number>,
+    ) {
       state.categoriesType = action.payload;
     },
-    setSort(state, action: PayloadAction<Sort>) {
+    setSort(state: { sortType: Sort }, action: PayloadAction<Sort>) {
       state.sortType = action.payload;
     },
   },

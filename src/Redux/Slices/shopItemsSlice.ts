@@ -9,12 +9,13 @@ type FetchShopItemsArgs = {
   sortType: Sort;
 };
 
+const FETCH_DATA = process.env.REACT_APP_ITEMS_DATA;
 export const fetchShopItems = createAsyncThunk(
   'shopItems/fetchShopItemsStatus',
   async (params: FetchShopItemsArgs) => {
     const { category, currentPage, sortType } = params;
     const res = await axios.get<ShopItems[]>(
-      `https://62a167b3cc8c0118ef4ade8d.mockapi.io/items?page=${currentPage}&${category}&sortBy=${sortType.sortProperty}&order=desc`,
+      `${FETCH_DATA}/items?page=${currentPage}&${category}&sortBy=${sortType.sortProperty}&order=desc`,
     );
     return res.data;
   },
@@ -45,7 +46,10 @@ export const shopItemsSlice = createSlice({
   name: 'shopItems',
   initialState,
   reducers: {
-    setItems(state, action: PayloadAction<ShopItems[]>) {
+    setItems(
+      state: { items: ShopItems[] },
+      action: PayloadAction<ShopItems[]>,
+    ) {
       state.items = action.payload;
     },
   },

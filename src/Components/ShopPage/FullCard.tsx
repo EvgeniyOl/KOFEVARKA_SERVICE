@@ -30,12 +30,11 @@ const FullCard: React.FC = () => {
     setCountItem(countItem + 1);
   };
 
+  const FETCH_DATA = process.env.REACT_APP_ITEMS_DATA;
   useEffect(() => {
     async function fetchShopItem() {
       try {
-        const { data } = await axios.get(
-          `https://62a167b3cc8c0118ef4ade8d.mockapi.io/items/${id}`,
-        );
+        const { data } = await axios.get(`${FETCH_DATA}/items/${id}`);
         setShopItem(data);
       } catch (err) {
         console.log(err);
