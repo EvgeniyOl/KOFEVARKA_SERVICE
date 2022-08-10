@@ -2,7 +2,7 @@
 
 Если вы живете в Омске и любите кофе или у вас есть кофемашина, требующая обслуживания, переходите по ссылке!
 
-[![kofevarka](https://img.shields.io/badge/-Kofevarka-AA2521?style=for-the-badge&)](https://kofevarka-service-9e1hugire-evgeniyol.vercel.app/)
+[![kofevarka](https://img.shields.io/badge/-Kofevarka-AA2521?style=for-the-badge&)](http://kofevarkaservice.ru/)
 
 <hr>
 

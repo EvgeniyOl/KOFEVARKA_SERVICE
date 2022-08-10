@@ -12,7 +12,7 @@ const About: React.FC = () => {
         <div className="row d-flex p-0 m-0 justify-content-center">
           <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 pt-4 text-center justify-content-center p-0 border border-info">
             <h5>Адрес:</h5>
-            <p>Омск, ул. Декабристов, 116/1, 644046</p>
+            <p>Омск, улица Декабристов, 116/1, 644046</p>
             <h5>Телефон:</h5>
             <p>8 (903) 927-13-76</p>
             <div className="about-contacts">
