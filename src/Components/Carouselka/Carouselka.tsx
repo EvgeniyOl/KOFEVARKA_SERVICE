@@ -12,7 +12,7 @@ const Carouselka: React.FC = () => {
         <Carousel.Item className="carousel-item">
           <img className="d-block w-100" src={slide1} alt="First slide" />
           <Carousel.Caption className="caption">
-            <p className="p">
+            <p className="carousel-text">
               Регулярно заказывайте у нас кофе и будьте спокойны за свою
               кофемашину
               <br /> Техническое Обслуживание будет Бесплатным!
@@ -25,7 +25,9 @@ const Carouselka: React.FC = () => {
         <Carousel.Item className="carousel-item">
           <img className="d-block w-100" src={slide2} alt="First slide" />
           <Carousel.Caption className="caption">
-            <p className="p">Большой выбор кофе от разных обжарщиков</p>
+            <p className="carousel-text">
+              Большой выбор кофе от разных обжарщиков
+            </p>
             <motion.p whileHover={{ scale: 1.5 }}>
               <a href="/Shop">Заказать кофе</a>
             </motion.p>
@@ -34,7 +36,9 @@ const Carouselka: React.FC = () => {
         <Carousel.Item className="carousel-item">
           <img className="d-block w-100" src={slide3} alt="First slide" />
           <Carousel.Caption className="caption">
-            <p className="p">Можем сами забрать вашу машинку в сервис</p>
+            <p className="carousel-text">
+              Можем сами забрать вашу машинку в сервис
+            </p>
             <motion.p whileHover={{ scale: 1.5 }}>
               <a href="/Service">Оставить заявку</a>
             </motion.p>

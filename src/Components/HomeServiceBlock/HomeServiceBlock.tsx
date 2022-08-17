@@ -3,7 +3,7 @@ import './HomeServiceBlock.css';
 import { motion } from 'framer-motion';
 import { Button, ListGroup, Modal } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
-import ModalForm from '../ServiceForm/ServiceForm';
+import ServiceForm from '../ServiceForm/ServiceForm';
 
 const cardAnimation = {
   hiddenBottom: {
@@ -43,7 +43,7 @@ const HomeServiceBlock: React.FC = () => {
         </div>
         <div className="row p-0">
           <Modal show={show} onHide={handleClose}>
-            <ModalForm />
+            <ServiceForm />
           </Modal>
 
           <div className="col-lg-6 col-md-12 col-sm-12 p-0">

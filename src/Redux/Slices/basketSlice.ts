@@ -28,6 +28,10 @@ export const basketSlice = createSlice({
   name: 'basket',
   initialState,
   reducers: {
+    saveItemsLS(state: BasketSliceState) {
+      const json = JSON.stringify(state.items);
+      localStorage.setItem('basketItems', json);
+    },
     addItems(state: BasketSliceState, action: PayloadAction<BasketItem>) {
       const findItems = state.items.find((obj) => obj.id === action.payload.id); // найти объект
       if (findItems) {
@@ -59,6 +63,6 @@ export const basketSlice = createSlice({
   },
 });
 export const basketSelector = (state: RootState) => state.basketReducer;
-export const { addItems, removeItems, clearItems, minusItem } =
+export const { addItems, removeItems, clearItems, minusItem, saveItemsLS } =
   basketSlice.actions;
 export default basketSlice.reducer;

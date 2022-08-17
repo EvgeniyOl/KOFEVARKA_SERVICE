@@ -1,15 +1,14 @@
-import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { clearItems } from '../../redux/slices/basketSlice';
-import { getApplication } from '../../utils/getApplicationData';
+import sendBasketMessage from '../../utils/sendBasketMessage';
 
-type FormValues = {
-  Имя: string;
-  Номер_телефона: string;
-  Адрес: string;
+export type BasketFormValues = {
+  Name: string;
+  Phone_number: string;
+  address: string;
 };
 
 const BasketModalForm: React.FC = () => {
@@ -20,25 +19,10 @@ const BasketModalForm: React.FC = () => {
     formState: { errors },
     handleSubmit, //обертка
     reset, //сброс после отправки
-  } = useForm<FormValues>();
+  } = useForm<BasketFormValues>();
 
-  const onSubmit = (data: any) => {
-    const TG_TOKEN = process.env.REACT_APP_TOKEN;
-    const CHAT_ID = process.env.REACT_APP_CHAT;
-    const URL_API = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
-
-    let message = `<b>Заявка с сайта!</b>\n`;
-    const { itemData, totalPriceData } = getApplication();
-    message += JSON.stringify({ itemData, totalPriceData, data }, null, '\t');
-    axios
-      .post(URL_API, {
-        chat_id: CHAT_ID,
-        parse_mode: 'html',
-        text: message,
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const onSubmit = (data: BasketFormValues) => {
+    sendBasketMessage(data);
     reset();
     Swal.fire('Готово', 'Ваш заказ отправлен, ожидайте звонка!', 'success');
     dispatch(clearItems());
@@ -55,7 +39,7 @@ const BasketModalForm: React.FC = () => {
             <Form.Label>Ваше имя</Form.Label>
             <Form.Control
               placeholder="Дмитрий"
-              {...register('Имя', {
+              {...register('Name', {
                 required: 'Поле обязательно к заполнению!',
                 minLength: {
                   value: 2,
@@ -64,12 +48,12 @@ const BasketModalForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.Имя?.message}</p>
+          <p className="errors">{errors?.Name?.message}</p>
           <Form.Group>
             <Form.Label>Номер телефона</Form.Label>
             <Form.Control
               placeholder="+7913xxxxxxx"
-              {...register('Номер_телефона', {
+              {...register('Phone_number', {
                 required: 'Поле обязательно к заполнению!',
                 minLength: {
                   value: 11,
@@ -82,12 +66,12 @@ const BasketModalForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.Номер_телефона?.message}</p>
+          <p className="errors">{errors?.Phone_number?.message}</p>
           <Form.Group>
             <Form.Label>Адрес доставки</Form.Label>
             <Form.Control
               placeholder="Ленина 10"
-              {...register('Адрес', {
+              {...register('address', {
                 required: 'Поле обязательно к заполнению!',
                 minLength: {
                   value: 2,
@@ -96,10 +80,10 @@ const BasketModalForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.Адрес?.message}</p>
+          <p className="errors">{errors?.address?.message}</p>
           <Button type="submit" variant="outline-success" className="mt-4">
             Отправить заявку
-          </Button>{' '}
+          </Button>
         </Form>
       </Modal.Body>
     </>

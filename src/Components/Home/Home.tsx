@@ -58,7 +58,6 @@ const Home: React.FC = () => {
           viewport={{ amount: 0.5, once: false }}
         >
           <ul>
-            {' '}
             <motion.p variants={textAnimation} custom={1}>
               Будем рады помочь вам
             </motion.p>

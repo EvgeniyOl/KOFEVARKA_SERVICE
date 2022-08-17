@@ -4,16 +4,18 @@ import './BasketButton.css';
 import basketImg from './../../assets/img/shopping-cart.png';
 import priceImg from './../../assets/img/price-tag.png';
 import { basketSelector } from '../../redux/slices/basketSlice';
+import { saveItemsLS } from '../../redux/slices/basketSlice';
 import { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
 const BasketButton: React.FC = () => {
   const { items, totalPrice } = useSelector(basketSelector);
+  const dispatch = useDispatch();
 
   const isMounted = useRef(false);
   useEffect(() => {
     if (isMounted.current) {
-      const json = JSON.stringify(items);
-      localStorage.setItem('basketItems', json); // сохраняем корзину в хранилище
+      dispatch(saveItemsLS()); // сохраняем корзину в хранилище
     }
     isMounted.current = true;
   }, [items]);

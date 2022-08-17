@@ -1,15 +1,15 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { Alert, Button, Form, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import sendServiceMessage from '../../utils/sendServiceMessage';
 import './ServiceForm.css';
 
-type FormValues = {
-  Имя: string;
-  Номер_телефона: string;
-  Проблема: string;
-  Кофемашина: string;
-  Адрес: string;
+export type FormValues = {
+  Name: string;
+  Phone_Number: string;
+  Problems: string;
+  coffee_machine: string;
+  address: string;
 };
 
 const ServiceForm: React.FC = () => {
@@ -22,25 +22,9 @@ const ServiceForm: React.FC = () => {
     reset, //сброс после отправки
   } = useForm<FormValues>();
 
-  const onSubmit = (data: any) => {
-    const TG_TOKEN = process.env.REACT_APP_TOKEN;
-    const CHAT_ID = process.env.REACT_APP_CHAT;
-    const URL_API = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
-
-    let message = `<b>Заявка с сайта!</b>\n`;
-    message += JSON.stringify(data, null, '\t');
-    axios
-      .post(URL_API, {
-        chat_id: CHAT_ID,
-        parse_mode: 'html',
-        text: message,
-      })
-      .then((res) => {
-        setShowAlert(!showAlert);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const onSubmit = (data: FormValues) => {
+    sendServiceMessage(data);
+    setShowAlert(!showAlert);
     reset();
   };
   return (
@@ -50,10 +34,10 @@ const ServiceForm: React.FC = () => {
       <Modal.Body>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group>
-            <Form.Label>Ваше имя</Form.Label>
+            <Form.Label>Ваше Имя</Form.Label>
             <Form.Control
               placeholder="Дмитрий"
-              {...register('Имя', {
+              {...register('Name', {
                 required: 'Поле обязательно к заполнению!',
 
                 minLength: {
@@ -63,12 +47,12 @@ const ServiceForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.Имя?.message}</p>
+          <p className="errors">{errors?.Name?.message}</p>
           <Form.Group>
             <Form.Label>Номер телефона</Form.Label>
             <Form.Control
               placeholder="+7913xxxxxxx"
-              {...register('Номер_телефона', {
+              {...register('Phone_Number', {
                 required: 'Поле обязательно к заполнению!',
 
                 minLength: {
@@ -82,14 +66,14 @@ const ServiceForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.Номер_телефона?.message}</p>
+          <p className="errors">{errors?.Phone_Number?.message}</p>
           <Form.Group className="mt-3">
             <Form.Label>Опишите проблему</Form.Label>
             <Form.Control
               placeholder="Завелись тараканы, хочу почистить"
               as="textarea"
               rows={3}
-              {...register('Проблема', {
+              {...register('Problems', {
                 required: 'Поле обязательно к заполнению!',
                 minLength: {
                   value: 2,
@@ -98,12 +82,12 @@ const ServiceForm: React.FC = () => {
               })}
             />
           </Form.Group>
-          <p className="errors">{errors?.Проблема?.message}</p>
+          <p className="errors">{errors?.Problems?.message}</p>
           <Form.Group>
             <Form.Label>Название, модель кофемашины</Form.Label>
             <Form.Control
               placeholder="самовар-3000"
-              {...register('Кофемашина', {
+              {...register('coffee_machine', {
                 required: true,
               })}
             />
@@ -112,7 +96,7 @@ const ServiceForm: React.FC = () => {
             <Form.Label>Заберите мою кофемашину по адресу</Form.Label>
             <Form.Control
               placeholder="Ленина 10 / 1 подъезд / 1 этаж / кв.1 "
-              {...register('Адрес')}
+              {...register('address')}
             />
           </Form.Group>
           {showAlert && (

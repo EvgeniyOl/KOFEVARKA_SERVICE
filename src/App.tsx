@@ -1,10 +1,6 @@
-import RoutePage from './components/RoutePage/RoutePage';
+import RoutePage from './RoutePage/RoutePage';
 
 const App: React.FC = () => {
-  return (
-    <>
-      <RoutePage />
-    </>
-  );
+  return <RoutePage />;
 };
 export default App;

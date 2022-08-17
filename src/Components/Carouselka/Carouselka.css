@@ -4,12 +4,12 @@
     font-size: calc(12px + (32 - 12) * ((100vw - 320px) / (1400 - 320)));
   }
 }
-.p {
+.carousel-text {
   color: #ffffff;
   font-size: 30px;
   margin-bottom: 10px;
 }
-.p a {
+.carousel-text a {
   font-size: 25px;
 }
 .caption {
