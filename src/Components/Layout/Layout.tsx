@@ -59,6 +59,8 @@ const Layout: React.FC = () => {
           </motion.li>
         </ul>
         <hr />
+        <a href="/policy">Политикa обработки персональных данных</a>
+        <hr />
         <a href="https://github.com/EvgeniyOl">
           © 2022 Created by Evgeniy Olyanskii
         </a>
