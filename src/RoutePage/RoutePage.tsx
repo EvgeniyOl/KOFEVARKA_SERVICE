@@ -5,6 +5,7 @@ import ServicePage from '../components/ServicePage/ServicePage';
 import ShopPage from '../components/ShopPage/ShopPage';
 import FullCard from '../components/ShopPage/FullCard';
 import Layout from '../components/Layout/Layout';
+import Policy from '../components/Policy/Policy';
 
 const RoutePage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const RoutePage: React.FC = () => {
         <Route path="shop" element={<ShopPage />} />
         <Route path="/basket" element={<BasketPage />} />
         <Route path="shop/fullcard/:id" element={<FullCard />} />
+        <Route path="/policy" element={<Policy />} />
       </Route>
     </Routes>
   );

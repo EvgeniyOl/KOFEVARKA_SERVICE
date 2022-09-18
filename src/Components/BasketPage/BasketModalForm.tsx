@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { clearItems } from '../../redux/slices/basketSlice';
 import sendBasketMessage from '../../utils/sendBasketMessage';
+import { useState } from 'react';
 
 export type BasketFormValues = {
   Name: string;
@@ -13,6 +14,7 @@ export type BasketFormValues = {
 
 const BasketModalForm: React.FC = () => {
   const dispatch = useDispatch();
+  const [checked, setChecked] = useState(false);
 
   const {
     register, //набор св-в
@@ -81,7 +83,27 @@ const BasketModalForm: React.FC = () => {
             />
           </Form.Group>
           <p className="errors">{errors?.address?.message}</p>
-          <Button type="submit" variant="outline-success" className="mt-4">
+          <div className="policy">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              checked={checked}
+              onChange={() => setChecked(!checked)}
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              согласен c{' '}
+              <a href="/policy">политикой обработки персональных данных</a>
+            </label>
+          </div>
+          <Button
+            type="submit"
+            disabled={!checked}
+            variant="outline-success"
+            className="mt-4"
+          >
             Отправить заявку
           </Button>
         </Form>

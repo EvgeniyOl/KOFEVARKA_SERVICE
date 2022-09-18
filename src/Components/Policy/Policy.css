@@ -1,0 +1,15 @@
+.policyWrapper {
+  background-color: rgb(193, 193, 193);
+  padding: 50px 20px 20px 20px;
+}
+.policyWrapper ul {
+  list-style: none;
+}
+.policy_title {
+  font-weight: 500;
+  font-size: 26px;
+}
+.policy_text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

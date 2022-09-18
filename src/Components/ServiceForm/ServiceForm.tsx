@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Alert, Button, Form, Modal } from 'react-bootstrap';
+import { Alert, Button, Form, InputGroup, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import sendServiceMessage from '../../utils/sendServiceMessage';
 import './ServiceForm.css';
@@ -14,6 +14,7 @@ export type FormValues = {
 
 const ServiceForm: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   const {
     register, //набор св-в
@@ -109,7 +110,27 @@ const ServiceForm: React.FC = () => {
               Ваша заявка принята, ожидайте звонка.
             </Alert>
           )}
-          <Button type="submit" variant="outline-success" className="mt-4">
+          <div className="policy">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              checked={checked}
+              onChange={() => setChecked(!checked)}
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              согласен c{' '}
+              <a href="/policy">политикой обработки персональных данных</a>
+            </label>
+          </div>
+          <Button
+            type="submit"
+            disabled={!checked}
+            variant="outline-success"
+            className="mt-4"
+          >
             Отправить заявку
           </Button>{' '}
         </Form>

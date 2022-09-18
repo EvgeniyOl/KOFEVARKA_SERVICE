@@ -19,3 +19,15 @@
   margin-top: 30px;
   padding: 10px;
 }
+.policy {
+  margin-top: 10px;
+}
+.form-check-label {
+  margin-left: 5px;
+}
+.form-check-label a {
+  color: black;
+}
+.form-check-label a:hover {
+  color: black;
+}
